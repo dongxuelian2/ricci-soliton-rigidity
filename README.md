@@ -29,13 +29,13 @@ Research on complete steady gradient Ricci solitons with the standard
   four-dimensional steady case the factors are scaled cigars. These
   products have arbitrary tip-curvature ratio but collapsed boundary
   orbits, and demonstrate why strict curvature cannot be weakened.
-* **All-orders formal obstruction:** explicit collapsed axis data with
-  strictly positive curvature operator and any prescribed tip ratio
-  extend uniquely to formal solutions of the full soliton PDE at every
-  transverse order, smoothly through the common vertex. Finite truncations
-  retain positive curvature near the complete fixed surface, whose total
-  curvature is \(2\pi\). Convergence and a complete ambient soliton are
-  not proved; finite-order compatibility cannot rule out these data.
+* **Convergent local-soliton obstruction:** explicit collapsed axis data
+  extend to genuine analytic steady solitons on neighborhoods of a complete
+  fixed surface, smoothly through the vertex, with positive curvature
+  operator and any prescribed tip ratio. The surface has total curvature
+  \(2\pi\). The proof combines an all-orders recurrence, Bianchi constraint
+  propagation, and an analytic convergence argument. Ambient completeness
+  and a complete positive-curvature extension remain unproved.
 
 See [PROOF.md](PROOF.md) for complete arguments, source statements, and
 precise hypotheses. No numerical experiment is used.

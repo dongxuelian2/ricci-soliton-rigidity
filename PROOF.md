@@ -841,16 +841,156 @@ and on the truncation order. Since the formal residual is zero,
 taking enough coefficients makes each finite truncation satisfy the
 equation to any specified finite transverse order. \(\square\)
 
-The strict curvature-gap problem therefore cannot be resolved by
-finding an inconsistent finite transverse soliton jet in this
-particular collapsed axis construction. The remaining distinction is
-between these formally compatible jets and a convergent, globally
-complete soliton. No uniform neighborhood width, curvature lower bound
-at infinity, or convergence estimate follows from the recurrence.
+### Lemma 7.3 (analytic regular-singular Cauchy problem)
 
-These are obstructions to **finite-jet arguments**, not counterexamples
-to the soliton conjecture. Convergence and global completeness are not
-settled by formal compatibility. A totally geodesic three-dimensional fixed submanifold also
+Let \(A\) be a constant finite-dimensional matrix whose eigenvalues have
+positive real parts. If \(G(t,s,V,Z)\) is analytic near
+\((0,s_0,0,0)\), then
+\[
+ (t\partial_t+A)V=tG(t,s,V,\partial_sV),\qquad V(0,s)=0
+ \tag{27}
+\]
+has a unique local jointly analytic solution.
+
+**Proof.** The coefficient equation for \(V=\sum_{n\ge1}V_n(s)t^n\) is
+\[
+ (nI+A)V_n=[t^{n-1}]G(t,s,V,\partial_sV).
+\]
+For some constant \(C\), the induced maximum norm satisfies
+\(\|(nI+A)^{-1}\|\le C/n\) for all integers \(n\ge1\).
+This follows by a Neumann expansion for large \(n\), then increasing
+\(C\) for the finitely many remaining invertible matrices.
+
+Expand \(G\) in powers of \(t,\xi=s-s_0,V,Z\), replace its coefficients
+by their absolute values, sum over output components, and replace all
+components of \(V,Z\) by scalar variables \(v,z\).
+This gives an analytic scalar majorant \(\widehat G(t,\xi,v,z)\).
+The ordinary analytic Cauchy--Kowalevski theorem solves
+\[
+ \partial_tv=C\widehat G(t,\xi,v,\partial_\xi v),\qquad v(0,\xi)=0.
+\]
+Its formal coefficients are nonnegative. Induction in \(n\) shows that
+\(v_n(\xi)\) coefficientwise majorizes every component of \(V_n\):
+differentiation in \(\xi\) preserves majorization, and the preceding
+matrix bound gives the required factor \(C/n\).
+Thus the vector formal series converges in a smaller bidisc.
+Its recurrence proves uniqueness. \(\square\)
+
+### Proposition 7.4 (convergent local solitons with the collapsed axis)
+
+For every \(0<\theta<1\), the formal series in Proposition 7.2 converge
+to an analytic metric and potential on an invariant open neighborhood
+of the entire complete fixed surface. They satisfy
+\(\operatorname{Ric}=\nabla^2F\) exactly and, after shrinking that
+neighborhood, have strictly positive curvature operator.
+The fixed surface still has \(w(s)=\tanh s\), total curvature \(2\pi\),
+and tip ratio \(\lambda_p/\lambda_q=\theta\).
+
+The ambient neighborhood is **not asserted complete**. Neither a
+uniform neighborhood width at infinity nor a complete extension with
+positive curvature has been established.
+
+**Proof.** First fix \(s_0>0\). Put \(D=t\partial_t\) and
+\[
+ u=(x,y,z,f)=\left(\log H,\log(a/w),\log(b/t),F-F_0\right),
+ \quad p=Du,\quad W=t\partial_su,\quad Y=(u,p,W).
+\]
+Treat \(W\) initially as independent and adjoin \(Du=p\) and
+\(DW=W+t\partial_sp\). Multiplying the four normalized diagonal
+equations by \(t^2\) gives an invertible constant coefficient matrix
+for their second \(D\)-derivatives: the \(ss,\phi\phi,\psi\psi\)
+equations contain respectively \(-Dp_x,-Dp_y,-Dp_z\), while the
+\(tt\) equation contains \(-D(p_x+p_y+p_z+p_f)\).
+Their regularized spatial derivatives are
+\[
+ tH_s/H=W_x,\quad ta_s/a=tw'/w+W_y,\quad
+ tb_s/b=W_z,\quad tF_s=tF_0'+W_f.
+\]
+Second spatial derivatives give \(t\partial_sW\), quadratic products,
+and analytic background terms with a factor \(t^2\).
+Since \(w(s_0)\ne0\), solving for \(Dp\) gives the analytic system
+\[
+ DY=MY+Q(s,Y)+tG_0(t,s,Y,\partial_sY),
+ \qquad Q(s,Y)=O(|Y|^2).
+ \tag{28}
+\]
+The constant indicial matrix is explicitly
+\[
+ M(u,p,W)=(p,Bp,W),\qquad
+ Bp=(0,0,-p_x-p_y-p_z-p_f,\ 2p_x+2p_y+2p_f).
+\]
+For example, the time-linearized diagonal equations are
+\(D^2x=D^2y=0\),
+\(D^2z+Dz+Dx+Dy+Df=0\), and
+\((D^2-D)(x+y+f)+(D^2+D)z=0\).
+Thus the spectrum of \(M\) is contained in \(\{-1,0,1,2\}\).
+
+Let \(\bar u=u_2(s)t^2+u_4(s)t^4\) be the compatible logarithmic jet
+from Proposition 7.2 and set \(P=(\bar u,D\bar u,t\partial_s\bar u)\).
+Its last block includes a term of degree five.
+Its residual in (28) is \(O(t^6)\), and its first and last block
+equations hold exactly. Substituting \(Y=P+t^4V\) therefore yields
+\[
+ (D+4I-M)V=tG_1(t,s,V,\partial_sV),
+\]
+with \(G_1\) analytic. Indeed, \(P=O(t^2)\) makes the linearized
+quadratic term \(O(t^2)V\) after division by \(t^4\); its nonlinear
+remainder and the source residual also have positive powers of \(t\).
+Spatial derivatives retain their factor \(t\).
+The eigenvalues of \(4I-M\) lie in \(\{2,3,4,5\}\), so Lemma 7.3 applies.
+
+The derivative constraints are preserved: \(p=Du\), and
+\(Z=W-t\partial_su\) satisfies \(DZ=Z\) with \(Z=O(t^4)\), hence \(Z=0\).
+Thus the solution satisfies the actual diagonal equations. Uniqueness
+identifies its Taylor series with Proposition 7.2's series. It is even
+in \(t\), so the metric extends analytically across the normal polar
+axis. The mixed residual has every Taylor coefficient zero by
+Proposition 7.2 and is analytic; it therefore vanishes identically.
+This proves convergence and the full soliton equation near \(s_0>0\).
+
+To include the common vertex, choose \(0<r<R<\pi/2\).
+The background functions \(\tanh s,\operatorname{sech}^2s\), and a
+branch of \(\log\cosh s\) are holomorphic on \(|s|<R\).
+The formal recurrence uses differentiation, algebra, division by
+nonzero constants, and formal inverses with leading terms \(1\) or
+\(w(s)\). Every coefficient is consequently meromorphic on this same
+disk, with only a possible finite-order pole at \(s=0\).
+Proposition 7.2's real-axis smoothness rules out that pole.
+The logarithmic coefficients are therefore holomorphic on a common
+disk independent of their order.
+
+The preceding convergence proof also applies at each complex point
+on \(|s|=r\). Shrinking these local bidiscs to relatively compact products, a finite
+covering of the circle supplies a common positive \(t\)-radius \(\varepsilon\) and finite bound \(C_0\).
+Cauchy's coefficient estimates give
+\[
+ \sup_{|s|=r}|u_n(s)|\le C_0\varepsilon^{-n}.
+\]
+Maximum modulus extends this bound to \(|s|\le r\); the series
+therefore converges normally on smaller bidiscs across \(s=0\).
+The formal Cartesian regularity identities pass to the sum:
+the functions are even in \(s,t\),
+\(H(0,t)=(a/s)(0,t)\), and \((b/t)(s,0)=1\).
+In particular \(H^2-(a/s)^2\) is divisible by \(s^2\), and
+\(1-(b/t)^2\) by \(t^2\), as analytic functions.
+These identities give an analytic metric in Cartesian coordinates
+on both rotational planes. The soliton equation extends across
+their axes by continuity.
+
+Finally the unique analytic germs agree on sufficiently small
+overlaps, since they have the same convergent normal Taylor series.
+They glue to a neighborhood of all \(s\ge0\).
+Their axis curvature operator is exactly that of Proposition 7.1,
+so positivity holds after shrinking this neighborhood pointwise.
+Its induced fixed-surface metric is unchanged and complete.
+No step establishes ambient completeness. \(\square\)
+
+The local construction is not a counterexample to the complete-soliton
+conjecture. It proves that strict ambient curvature, the exact soliton
+PDE on a neighborhood of the complete fixed surface, and the prescribed
+tip ratio still do not force the strict total-curvature gap. The
+unresolved distinction is a complete ambient extension with the required
+curvature conditions, rather than finite jets or local convergence. A totally geodesic three-dimensional fixed submanifold also
 does not automatically inherit the steady equation: its intrinsic Ricci
 tensor omits normal-curvature contributions. Three-dimensional soliton
 classification cannot be applied to it on total geodesicity alone.

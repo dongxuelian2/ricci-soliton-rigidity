@@ -48,6 +48,13 @@ Research on complete steady gradient Ricci solitons with the standard
   region, second singular-orbit matching, and ambient completeness remain
   unresolved. A fixed \(s\) still permits only a finite normal interval.
 
+* **Necessary global curvature budget:** any complete positively curved
+  extension of the constructed germ must have reflected-section curvature
+  \(\int_S K_S\,dA\le4\arctan(3/\sqrt{4/\theta-1})\).
+  Gauss--Bonnet on potential-level quarter-disks proves the bound.
+  This section is not the fixed surface in the boundary-orbit criterion;
+  the condition does not yet exclude complete extension.
+
 See [PROOF.md](PROOF.md) for complete arguments, source statements, and
 precise hypotheses. No numerical experiment is used.
 

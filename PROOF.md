@@ -1476,6 +1476,120 @@ the second singular-orbit boundary, not growth of \(s_T\) faster
 than every linear function. The constants in (38) are not claimed
 sharp, and (38) does not imply a complete extension.
 
+### Proposition 7.10 (a global curvature budget for a complete extension)
+
+Suppose the analytic germ of Proposition 7.4 admits a complete extension
+with the standard \(O(2)\times O(2)\) action and positive sectional
+curvature. Let \(S\) be the complete reflected two-dimensional section
+from Section 4, and let \(Q\) be one of its quadrants. Then
+\[
+ \int_Q K_S\,dA\le
+ \frac{\pi}{2}-\arctan\frac{\sqrt{4/\theta-1}}3,
+ \qquad
+ \int_S K_S\,dA\le
+ 4\arctan\frac3{\sqrt{4/\theta-1}}.
+ \tag{44}
+\]
+The second bound is strictly less than \(4\pi/3\) for \(0<\theta<1\),
+and tends to zero as \(\theta\) tends to zero.
+
+Here \(S\) is the polar section, **not** the fixed surface
+\(\Sigma_p\) whose total curvature is \(2\pi\) in this construction.
+Thus (44) is a necessary condition for complete extension, not the
+strict fixed-surface curvature gap in (19).
+
+**Proof.** Put \(f=F|_S\), normalized by \(f(o)=0\).
+Since \(S\) is totally geodesic and \(\nabla F\) is tangent to it,
+\[
+ \nabla_S^2 f=\operatorname{Ric}_M|_{TS}>0.
+\]
+The potential is proper. Indeed, on a small compact ball about \(o\),
+positive Ricci curvature gives a uniform positive lower bound for
+\((F\circ\gamma)'(r_0)\) along unit-speed minimizing geodesics from
+\(o\). Convexity then gives \(F(x)\ge\varepsilon d(o,x)-C\).
+Properness restricts to the closed section \(S\).
+The sole critical point is the nondegenerate minimum \(o\);
+its regular sublevel sets are disks, and its levels are circles.
+Each axis ray meets a positive level exactly once, by strict
+convexity along that ray. Reflection symmetry divides the level
+into four arcs.
+
+For \(r>0\), let \(Q_r=Q\cap\{f\le r\}\), and let \(\Gamma_r\)
+be its level arc. The other two boundary pieces are geodesic axis
+segments. All three interior angles are \(\pi/2\): the axes are
+orthogonal at \(o\), and \(\nabla f\) is tangent to them at the
+level intersections. The inward geodesic curvature of \(\Gamma_r\)
+is
+\[
+ k_r=\frac{\nabla_S^2f(T,T)}{|\nabla_S f|}>0,
+\]
+where \(T\) is its unit tangent. Gauss--Bonnet gives the exact identity
+\[
+ \int_{Q_r}K_S\,dA+\int_{\Gamma_r}k_r\,d\ell=\frac{\pi}{2}.
+ \tag{45}
+\]
+Global minimizing properties of the axis rays are not needed.
+
+Fix a finite \(T_0>0\). Proposition 7.8 gives, uniformly with the
+needed derivatives on \(0\le t\le T_0\) as \(s\to\infty\),
+\[
+ h=dt^2+H(s,t)^2ds^2\longrightarrow dt^2+ds^2,\qquad
+ F_s\longrightarrow3,\qquad F_t\longrightarrow u'(t),
+\]
+where
+\[
+ u(t)=2\log\cosh(t/A)-3\log2,\qquad
+ d:=2/A=\sqrt{4/\theta-1}.
+\]
+Consequently \(F(s_r(t),t)=r\) has, for all sufficiently large \(r\),
+a branch on \(0\le t\le T_0\) with \(s_r(t)\to\infty\) uniformly and
+\[
+ s_r'(t)\longrightarrow-u'(t)/3,\qquad
+ s_r''(t)\longrightarrow-u''(t)/3.
+\]
+This branch is a subarc of \(\Gamma_r\), starting at the first axis.
+To justify using it in a complete extension, analytic uniqueness
+identifies the continuation with the normal exponential development.
+The positive coefficients \(H,a,b\) on the principal part of the
+finite-width end prevent local focal or singular-orbit breakdown
+there. Its image remains in the open quadrant for \(t>0\).
+A locally regular level arc starting at the first axis cannot wrap
+around inside that quadrant: the global level there is a single
+simple arc with its endpoints on the two axes. No global injectivity
+of the normal coordinate system is asserted.
+
+The curvature integral on this subarc converges to that of the
+Euclidean graph \(s=\text{constant}-u(t)/3\). Thus
+\[
+ \lim_{r\to\infty}
+ \int_{\Gamma_r[0,T_0]}k_r\,d\ell
+ =
+ \int_0^{T_0}
+ \frac{u''(t)/3}{1+(u'(t)/3)^2}\,dt
+ =
+ \arctan\!\left(\frac d3\tanh(T_0/A)\right).
+ \tag{46}
+\]
+All other portions of \(\Gamma_r\) have positive geodesic curvature.
+Since \(K_S\ge0\) and the \(Q_r\) exhaust \(Q\), (45), (46), and
+monotone convergence yield
+\[
+ \int_QK_S\,dA\le
+ \frac{\pi}{2}
+ -\arctan\!\left(\frac d3\tanh(T_0/A)\right).
+\]
+Now let \(T_0\to\infty\). Multiplying by four and using the reflections
+proves (44). The limits are taken in this order; no uniform
+continuation over all normal distances at a fixed \(s\) is used.
+\(\square\)
+
+This budget constrains the unknown region and second-axis matching.
+It does not show that the constructed germ exceeds the budget.
+A contradictory lower bound for the actual section curvature, or
+another global matching obstruction, is still missing. No
+unconditional statement about the boundary topology of the
+Lavoyer--Peachey family follows from (44).
+
 The local construction is not a counterexample to the complete-soliton
 conjecture. It proves that strict ambient curvature, the exact soliton
 PDE on a neighborhood of the complete fixed surface, and the prescribed

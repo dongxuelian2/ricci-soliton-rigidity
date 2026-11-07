@@ -11,10 +11,11 @@ Research on complete steady gradient Ricci solitons with the standard
   \(\alpha>0\) is equivalent to total Gaussian curvature of that fixed
   surface being strictly less than \(2\pi\). The proof compares intrinsic
   and ambient geometry without assuming global convexity of the fixed set.
-* **Exact symmetry:** distinct Ricci eigenvalues on the two tip summands
-  determine the full isometry group. In particular,
-  \(\operatorname{Isom}(\mathcal S^{k,k}_\theta)=O(k)\times O(k)\) for
-  \(k\ge2\), \(0<\theta<1\).
+* **Exact symmetry in all factor dimensions:** distinct pure sectional
+  curvatures at the tip determine the full isometry group through the
+  curvature operator, even when the Ricci eigenvalues coincide. Thus
+  \(\operatorname{Isom}(\mathcal S^{p,q}_\theta)=O(p)\times O(q)\) for
+  all \(p,q\ge2\), \(0<\theta<1\).
 * **Four-dimensional collapse corollary:** assuming Theorem 1.1 of Fang's
   27 October 2026 preprint, \(\mathcal S^{2,2}_\theta\) is not
   \(\kappa\)-noncollapsed at all scales for any \(\kappa>0\). The proof

@@ -114,10 +114,77 @@ exchange isometry is possible.
 Positive curvature gives \(\lambda_q>0\). Apply Proposition 2.1.
 \(\square\)
 
-For unequal \(p,q\), the condition is instead
+For unequal \(p,q\), the Ricci condition is instead
 \((p-1)\lambda_p-(q-1)\lambda_q+(q-p)\mu\ne0\).
-The prescribed ratio \(\lambda_p/\lambda_q\) alone does not automatically
-verify this condition.
+The prescribed ratio alone need not verify this condition. The full
+curvature operator removes this limitation.
+
+### Proposition 2.3 (curvature determination in all factor dimensions)
+
+Under the geometric hypotheses of Proposition 2.1, with \(p,q\ge2\),
+assume only that \(\lambda_p\ne\lambda_q\), rather than that
+\(\rho_p\ne\rho_q\). Then the full isometry group is the given
+\(O(p)\times O(q)\).
+
+**Proof.** The first part of Proposition 2.1 shows that every isometry
+fixes \(o\), independently of any eigenvalue assumption. Set
+\(E=T_oM=V_p\oplus V_q\). Choose an orthonormal basis adapted to this
+decomposition. Reflection of any single basis vector belongs to the given
+isotropy group. For any two different unordered coordinate pairs, a
+reflection in an index belonging to exactly one pair changes the sign of
+one corresponding basis bivector and not the other. Invariance therefore
+forces every off-diagonal coefficient of the curvature operator
+\(\mathcal R:\Lambda^2E\to\Lambda^2E\) to vanish. Permutations within
+each summand identify the diagonal entries, giving
+\[
+ \mathcal R=
+ \lambda_p I_{\Lambda^2V_p}
+ \oplus\mu I_{V_p\wedge V_q}
+ \oplus\lambda_q I_{\Lambda^2V_q}.
+\]
+This argument uses the full orthogonal groups, including reflections,
+and applies without exceptions when a factor has dimension two or four.
+
+Because \(\lambda_p\ne\lambda_q\), at least one of these two pure
+curvature values differs from \(\mu\). Its full eigenspace is thus
+\(\Lambda^2V\) for one of the two factors \(V\). This eigenspace
+determines \(V\) intrinsically. Indeed, identify bivectors with
+skew-adjoint endomorphisms by
+\[
+ A_{u\wedge v}(x)=\langle u,x\rangle v-\langle v,x\rangle u.
+\]
+Then
+\[
+ \operatorname{span}\{A_\omega x:
+       \omega\in\Lambda^2V,\ x\in E\}=V.
+\]
+The inclusion into \(V\) is immediate; the reverse inclusion follows by
+choosing, for each nonzero \(v\in V\), a unit vector \(u\in V\) orthogonal
+to \(v\), since \(A_{u\wedge v}u=v\). Here \(\dim V\ge2\) is essential.
+
+The derivative of any isometry at \(o\) commutes with \(\mathcal R\),
+so it preserves this eigenspace and its intrinsically defined support
+\(V\). Orthogonality also preserves \(V^\perp\). Hence every such
+derivative lies in \(O(V_p)\times O(V_q)\). The given group realizes
+all of these derivatives, and the injectivity argument in Proposition
+2.1 identifies every isometry with its corresponding group element.
+\(\square\)
+
+### Corollary 2.4 (the entire asymmetric Lavoyer--Peachey family)
+
+For all \(p,q\ge2\) and \(0<\theta<1\),
+\[
+ \operatorname{Isom}(\mathcal S^{p,q}_\theta)=O(p)\times O(q).
+\]
+
+**Proof.** The prescribed tip curvatures satisfy
+\(\lambda_p=\theta\lambda_q\) and \(\lambda_q>0\), so they are distinct.
+Apply Proposition 2.3. \(\square\)
+
+This extends Corollary 2.2 to unequal factor dimensions, even if the
+tip Ricci eigenvalues happen to coincide. It does not establish the
+strict total-curvature gap or remove the external input in Section 3.
+No claim of literature priority is made.
 
 ## 3. A four-dimensional collapse consequence of recent literature
 

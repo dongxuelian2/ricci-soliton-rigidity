@@ -11,6 +11,13 @@ Research on complete steady gradient Ricci solitons with the standard
   \(\alpha>0\) is equivalent to total Gaussian curvature of that fixed
   surface being strictly less than \(2\pi\). The proof compares intrinsic
   and ambient geometry without assuming global convexity of the fixed set.
+* **Actual-axis alternatives:** the axis radius is bounded exactly when
+  its angular--normal curvature is integrable. An unbounded sublinear
+  radius requires nonsummable angular--normal curvature but summable
+  radial--normal curvature. Explicit analytic axis data satisfy all these
+  tests and every tip ratio, without being asserted to come from a complete
+  soliton. The missing bridge from general collapsed axes to the special
+  cigar profile is therefore kept explicit.
 * **Exact symmetry in all factor dimensions:** distinct pure sectional
   curvatures at the tip determine the full isometry group through the
   curvature operator, even when the Ricci eigenvalues coincide. Thus

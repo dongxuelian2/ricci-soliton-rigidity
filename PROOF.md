@@ -598,6 +598,128 @@ In particular, for \(\mathcal S^{2,q}_\theta\),
 \]
 Apply Proposition 6.2. \(\square\)
 
+### Proposition 6.4 (actual-axis integral and curvature alternatives)
+
+Let \(p=q=2\) and suppose the complete soliton in Proposition 6.2
+has positive curvature operator. On \(\Sigma_p\), write
+\(f=F_0'\), \(k=-w''/w\), and let \(U,V,N\) be the sectional
+curvatures of a radial--normal, angular--normal, and normal
+two-plane, respectively. Thus \(U\) and \(V\) are generally
+different. The axis equations and scalar identity are
+\[
+ f'=k+2U,\qquad f\,w'/w=k+2V,\qquad
+ C=f^2+2k+4U+4V+2N,\quad C=R(o).
+\]
+There is a limit \(f\to\ell\in(0,\sqrt C]\), and
+\[
+ \int_0^\infty(k+2U)\,ds=\ell,\qquad
+ w\text{ is bounded}\ \Longleftrightarrow\
+ \int_1^\infty V\,ds<\infty.
+\]
+If \(w\to\infty\), then
+\[
+ \frac{2\int_1^s V(r)\,dr}{\log w(s)}\longrightarrow\ell.
+\]
+Furthermore \(k,U,V\to0\) and \(N\to(C-\ell^2)/2\).
+
+**Proof.** Strict positivity gives \(f'>0\), while the Hamilton
+identity bounds \(f\le\sqrt C\). Since \(f(0)=0\), its limit is
+positive and integration gives the first assertion.
+Completeness, positivity of \(w\), strict concavity, and
+\(w(0)=0\) imply \(0<w'/w\le1/s\).
+Consequently \(0<k+2V\le\sqrt C/s\), so \(k,V\to0\).
+Integrating the angular equation from \(1\) to \(s\) gives
+\[
+ 2\int_1^s V\,dr
+ =\int_1^s f(r)\,d\log w(r)-\int_1^s k(r)\,dr.
+\]
+The last integral is bounded, and \(f(1)\le f(r)\le\ell\).
+This proves the boundedness equivalence. If \(\log w(s)\to\infty\),
+the weighted average of \(f(r)\to\ell\) proves the stated limit.
+
+For the remaining pointwise limits, the standard curvature
+derivative estimate is needed, not just integrability.
+Positive curvature operator and \(R\le C\) bound
+\(|\mathrm{Rm}|\) globally. The complete steady flow is eternal
+and has the same curvature bound at every time. Applying Shi's
+gradient estimate [S] on a fixed past time interval bounds
+\(|\nabla\mathrm{Rm}|\) globally. Along the unit radial geodesic,
+\(f'=\operatorname{Ric}(\partial_s,\partial_s)\) is therefore
+uniformly Lipschitz. A nonnegative integrable uniformly Lipschitz
+function tends to zero: otherwise disjoint intervals of a fixed
+positive length would carry a fixed positive integral.
+Hence \(f'\to0\), so \(U\to0\). The scalar identity now gives
+the limit of \(N\). \(\square\)
+
+In particular, an unbounded sublinear axis has nonsummable \(V\)
+but summable \(U\). It cannot satisfy \(U=V\), or even an eventual
+bound \(U\ge\varepsilon V\) with fixed \(\varepsilon>0\).
+These statements apply to actual complete axes; they do not prove
+\(c_p>0\). If \(C=\ell^2\), the limiting normal curvature vanishes,
+so even a nonflat transverse cigar limit has not been supplied.
+If \(C>\ell^2\), the curvature limit alone supplies neither the
+product-end expansion nor the mode coefficients used in Section 7.
+
+### Example 6.5 (unbounded sublinear data pass the axis tests)
+
+The preceding necessary identities do not force a bounded radius,
+even with every axis sectional curvature positive and a prescribed
+tip ratio. Fix \(0<\theta<1\), choose \(c>6\), and take
+\[
+ 0<a<\min\left\{\frac12,\,
+          \frac{48(\theta^{-1}-1)}{c^2\pi^2}\right\},\qquad B=ca.
+\]
+Define
+\[
+ w(s)=\frac{s}{(1+s^2)^a},\quad
+ F_0(s)=B\left(s\arctan s-\tfrac12\log(1+s^2)\right),\quad
+ f=B\arctan s,
+\]
+and
+\[
+\begin{split}
+ k&=\frac{2a(3+(1-2a)s^2)}{(1+s^2)^2},\\
+ U&=(f'-k)/2,\qquad V=(fw'/w-k)/2,\\
+ C&=4B+12a(\theta^{-1}-1),\\
+ N&=\tfrac12(C-f^2-2f'-2fw'/w+2k).
+\end{split}
+\]
+All expressions have their smooth axis limits at \(s=0\);
+\(w\) is odd analytic and \(F_0,k,U,V,N\) are even analytic.
+Directly,
+\[
+ w'=\frac{1+(1-2a)s^2}{(1+s^2)^{a+1}}>0,\qquad k=-w''/w>0.
+\]
+The estimates
+\[
+ k\le\frac{6a}{1+s^2},\qquad
+ \frac{k}{w'/w}
+ =\frac{2as(3+(1-2a)s^2)}
+        {(1+s^2)(1+(1-2a)s^2)}
+ \le\frac{6as}{1+s^2}\le6a\arctan s
+\]
+prove \(U,V>0\), since \(B>6a\).
+Also \(f'\le B\), \(fw'/w\le B\), and \(f^2\le B^2\pi^2/4\),
+so
+\[
+ N\ge6a(\theta^{-1}-1)-B^2\pi^2/8>0.
+\]
+At the common vertex,
+\[
+ k(0)=6a,\quad U(0)=V(0)=(B-6a)/2,\quad N(0)=6a/\theta.
+\]
+Thus the required pure-curvature ratio is \(\theta\).
+The defining formulas verify all three axis identities above.
+Nevertheless \(w(s)\sim s^{1-2a}\to\infty\) and \(w'(s)\to0\).
+
+These are compatible analytic axis data, not a complete soliton
+and not a counterexample to the LP conjecture. No full ambient
+existence or continuation assertion is made here. They show
+precisely why the axis identities and the exclusion of the special
+bounded cigar profile do not eliminate the unbounded sublinear
+branch of \(c_p=0\).
+
+
 ## 7. The remaining analytic obstacle
 
 For \(p=q=2\), the original boundary question is now the precise strict
@@ -2053,3 +2175,9 @@ criterion, not a proof that the criterion is satisfied.
 * **[F]** H. Fang, *O(3)-symmetry of four-dimensional steady Ricci solitons*,
   [arXiv:2610.36563v1](https://arxiv.org/html/2610.36563v1), 27 October 2026,
   Theorem 1.1 and equation (1.2). Recent preprint; used only for Corollary 3.1.
+
+* **[S]** W.-X. Shi, *Deforming the metric on complete Riemannian manifolds*,
+  Journal of Differential Geometry **30** (1989), 223–301.
+  [DOI](https://doi.org/10.4310/jdg/1214443292).
+  The standard bounded-curvature Ricci-flow gradient estimate is used
+  for the pointwise limits in Proposition 6.4.

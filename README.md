@@ -1,22 +1,48 @@
 # Ricci Soliton Rigidity
 
-**Research target:** Geometric and asymptotic rigidity of complete steady gradient Ricci solitons with \(O(p)\times O(q)\) symmetry, particularly the \(p=q=2\) case.
+Research on complete steady gradient Ricci solitons with the standard
+\(O(p)\times O(q)\) symmetry, especially the four-dimensional
+\(p=q=2\) Lavoyer--Peachey family.
 
-A steady gradient Ricci soliton satisfies
-\[
-\operatorname{Ric}(g)+\nabla^2 f=0,
-\]
-with the indicated sign convention for the potential \(f\).
+## Established in the working proof
 
-## Research questions
+* **Boundary-orbit criterion:** noncollapse is equivalent to positive
+  asymptotic orbit-radius slope on the fixed submanifold. For \(p=2\),
+  \(\alpha>0\) is equivalent to total Gaussian curvature of that fixed
+  surface being strictly less than \(2\pi\). The proof compares intrinsic
+  and ambient geometry without assuming global convexity of the fixed set.
+* **Exact symmetry:** distinct Ricci eigenvalues on the two tip summands
+  determine the full isometry group. In particular,
+  \(\operatorname{Isom}(\mathcal S^{k,k}_\theta)=O(k)\times O(k)\) for
+  \(k\ge2\), \(0<\theta<1\).
+* **Four-dimensional collapse corollary:** assuming Theorem 1.1 of Fang's
+  27 October 2026 preprint, \(\mathcal S^{2,2}_\theta\) is not
+  \(\kappa\)-noncollapsed at all scales for any \(\kappa>0\). The proof
+  is an incompatible-isometry-group argument; the analytic symmetry
+  theorem is an explicit external dependency.
+* **Correct reduction:** the ambient action has cohomogeneity two, not one.
+  The exact two-variable soliton equations and weighted identities are
+  derived in the proof.
+* **Flat-base rigidity:** under nonnegative sectional curvature, a flat
+  orbit-space metric forces a product. In the positively Ricci-curved
+  four-dimensional steady case the factors are scaled cigars. These
+  products have arbitrary tip-curvature ratio but collapsed boundary
+  orbits, and demonstrate why strict curvature cannot be weakened.
+* **Axis-equation obstruction:** explicit smooth metric/potential jets
+  satisfy the full soliton tensor equation and scalar identity along the
+  fixed surface, with strictly positive curvature operator and any tip
+  ratio, but total curvature exactly \(2\pi\). They are not complete
+  solitons. The strict-gap proof must use transverse/global information.
 
-1. **Orbit noncollapsing.** Find quantitative noncollapsing bounds for principal orbits under explicit geometric hypotheses.
-2. **Ideal boundary topology.** Determine which topological constraints at infinity follow from completeness, symmetry, and the soliton equation.
-3. **Asymptotic rigidity.** Classify or restrict asymptotic geometries and identify hypotheses for uniqueness.
-4. **The \(p=q=2\) model.** Fix orbit types and boundary conditions, then prove a sharp theorem or construct a counterexample.
+See [PROOF.md](PROOF.md) for complete arguments, source statements, and
+precise hypotheses. No numerical experiment is used.
 
-## Research
+## Still open
 
-See [`PROOF.md`](PROOF.md) for definitions, calculations, literature comparisons, proofs, and open obstructions. Include `scripts/` only when needed for a specific mathematical question.
+The main target remains proving the strict total-curvature bound, hence
+\(\alpha=a(0)>0\), for Lavoyer--Peachey's examples. This is
+**boundary-orbit noncollapse**, not ambient
+\(\kappa\)-noncollapse. The closed-disk conclusion and the paper's enhanced
+dimension reduction remain conditional on that hypothesis.
 
-**Status:** Research targets identified. No new theorem is asserted in the initial version.
+These notes make no priority claim and are not a submission manuscript.

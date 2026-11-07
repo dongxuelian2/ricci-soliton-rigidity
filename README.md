@@ -18,6 +18,17 @@ Research on complete steady gradient Ricci solitons with the standard
   tests and every tip ratio, without being asserted to come from a complete
   soliton. The missing bridge from general collapsed axes to the special
   cigar profile is therefore kept explicit.
+* **Actual ambient limits and a conditional global restriction:** every
+  unbounded actual axis, including a sublinear one, has unrescaled
+  pointed limits equal to a plane times a cigar, or flat four-space.
+  These are actual products, with quotient possibilities excluded.
+  If its positive limiting normal curvature and analytic power-law
+  expansion \(w\sim w_0s^\mu,\ F_0'=\ell-b/s+O(s^{-2})\) also hold,
+  completeness and positive curvature require
+  \(\mu(1-\mu)\le b\le\mu\). The upper bound uses a controlled
+  logarithmic-time transverse development and excludes part of the
+  diagnostic axis family. Neither the expansion hypothesis nor this
+  remaining nonempty interval resolves the LP strict gap.
 * **Exact symmetry in all factor dimensions:** distinct pure sectional
   curvatures at the tip determine the full isometry group through the
   curvature operator, even when the Ricci eigenvalues coincide. Thus

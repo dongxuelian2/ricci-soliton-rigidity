@@ -720,6 +720,303 @@ bounded cigar profile do not eliminate the unbounded sublinear
 branch of \(c_p=0\).
 
 
+### Proposition 6.6 (ambient limits along every unbounded axis)
+
+Under the hypotheses of Proposition 6.4, assume \(w(s)\to\infty\),
+without assuming \(w(s)/s\) has a positive limit. Set
+\(c=(C-\ell^2)/2\). For every sequence \(p_i\in\Sigma_p\) with
+\(s(p_i)\to\infty\), the unrescaled pointed manifolds have smooth
+subsequential limits. Every such limit, with potential normalized
+to vanish at its basepoint, is
+\[
+ \begin{cases}
+ \mathbb R^2\times\mathrm{Cigar}_c,\quad
+ F_\infty=\ell x+2\log\cosh(\sqrt{c/2}\,t),&c>0,\\
+ \mathbb R^4,\quad F_\infty=\ell x,&c=0.
+ \end{cases}
+\]
+The cigar has metric
+\(dt^2+(2/c)\tanh^2(\sqrt{c/2}\,t)d\psi^2\), and the basepoint
+is at its tip. These are actual products, not merely statements
+about universal covers.
+
+**Proof.** The Hamilton identity bounds the curvature tensor and
+\(|\nabla F|\). The steady flow is complete and eternal; Shi's
+estimates give uniform bounds on all curvature derivatives.
+The Gromoll--Meyer injectivity estimate, in the explicit formulation
+[CZ, Theorem 4.2.1], gives
+\(\operatorname{inj}(M,g)\ge\pi/\sqrt{\sup\sec_g}>0\).
+Smooth pointed compactness, equivalently [CZ, Theorem 4.1.5],
+therefore gives complete subsequential limits.
+The functions \(F-F(p_i)\) converge as well, since their gradients
+are bounded and their Hessians are Ricci. The limit is a complete
+steady soliton with nonnegative curvature operator.
+At its basepoint Proposition 6.4 gives
+\[
+ \operatorname{Ric}_\infty=\operatorname{diag}(0,0,c,c),
+ \qquad \nabla F_\infty=\ell e_s.
+\]
+The normal \(SO(2)\) isotropy also converges: it fixes the basepoints
+and retains the identity representation on the first two tangent
+directions and the standard rotations on the normal plane.
+
+We first rule out a compact quotient in the angular flat direction.
+Let \(\mathcal A\) be the first orbit radius and \(K=\partial_\phi\)
+the period-\(2\pi\) Killing field. Lemma 6.1 and the warped metric give
+\[
+ |K|=\mathcal A,\qquad
+ |\nabla K|^2=2|\nabla\mathcal A|^2\le2.
+\]
+With \(w_i=\mathcal A(p_i)\to\infty\), the fields \(X_i=K/w_i\)
+converge on fixed balls to a unit parallel field \(X_\infty\).
+Indeed \(|\mathcal A-w_i|\le r\) on \(B(p_i,r)\) and
+\(|\nabla X_i|\le\sqrt2/w_i\); higher convergence follows from
+the Killing-field identities and curvature derivative bounds.
+
+This parallel field has an exact dual. The first summand direction
+defines \(u:M\setminus\Sigma_q\to S^1\).
+Along a minimizing path of length at most \(r\) from \(p_i\),
+\(\mathcal A\ge w_i-r\) and
+\(\int|d\phi|\le r/(w_i-r)\).
+Hence the entire ball has its angular image in a single proper arc.
+The real branches
+\[
+ y_i=w_i\arg(u/u(p_i)),\qquad
+ dy_i=(w_i^2/\mathcal A^2)X_i^\flat
+\]
+agree on nested fixed balls. Their limit is one globally defined
+function \(y\) with \(dy=X_\infty^\flat\),
+\(|\nabla y|=1\), and \(\nabla^2y=0\).
+Completeness gives a global \(\mathbb R_y\) product factor.
+Also \(\langle\nabla y,\nabla F_\infty\rangle=0\).
+
+If \(c>0\), the tensor strong maximum principle for the complete
+bounded-curvature eternal limit [H; CZ, Section 2.2] makes the
+Ricci nullspace parallel, of rank two.
+The universal cover splits as \(\mathbb R^2\times N^2\).
+The lifted potential is \(\ell x+G\), with \(\nabla G=0\)
+at the surface basepoint. The surviving normal rotations act on
+\(N^2\). Its polar steady equations are
+\(G''=G'B'/B=-B''/B\).
+Smoothness and the tip curvature \(c\) give \(G'=cB\) and
+\(B'=1-cB^2/2\), yielding precisely the displayed complete cigar.
+The polar identification extends globally on the simply connected
+complete surface.
+
+A deck transformation preserves \(y\), so its Euclidean part is
+\((x,y)\mapsto(\pm x+a,y)\).
+Every cigar isometry fixes its unique curvature maximum and
+preserves \(G\). Preservation of the global potential
+\(\ell x+G\), with \(\ell>0\), forces the plus sign and \(a=0\).
+The transformation would then fix points over the cigar tip.
+Deck transformations act freely, so the deck group is trivial.
+
+If \(c=0\), the nonnegative scalar curvature vanishes at the
+basepoint. The equation
+\[
+ (\Delta+\nabla F_\infty\cdot\nabla)R_\infty
+       =-2|\operatorname{Ric}_\infty|^2
+\]
+and the strong maximum principle make the limit flat.
+Now \(x=F_\infty/\ell\) and \(y\) are global orthogonal affine
+unit coordinates, giving \(\mathbb R^2\times L^2\) with \(L^2\)
+complete and flat. Normal rotations preserve both coordinates,
+fix the basepoint, and act on \(L^2\) by all plane rotations.
+Lift these rotations to the Euclidean universal cover fixing the
+origin. They normalize the discrete deck group, and connectedness
+makes their conjugation action on each deck transformation constant.
+Every deck transformation thus commutes with all origin rotations,
+and consequently fixes the origin. Freeness again makes the deck
+group trivial. Thus \(L^2=\mathbb R^2\). \(\square\)
+
+This is fixed-radius ambient convergence, including for unbounded
+sublinear axes. It gives neither a convergence rate nor control
+on transverse distances increasing with \(s\).
+In particular it does not exclude \(w(s)/s\to0\).
+When \(c=0\), it says nothing about limits after rescaling by a
+curvature scale that tends to infinity.
+
+### Proposition 6.7 (a conditional restriction on power-law axes)
+
+Suppose, in addition, that an actual complete axis has \(c>0\) and
+\[
+ w(s)=w_0s^\mu W(1/s),\qquad
+ F_0'(s)=\ell-\frac b s+\frac1{s^2}G(1/s),
+ \qquad 0<\mu<1,
+\]
+where \(w_0>0\), and \(W,G\) are real analytic near zero with
+\(W(0)=1\). Then necessarily
+\[
+ \mu(1-\mu)\le b\le\mu.
+\]
+The upper bound uses positive curvature of the ambient soliton,
+not just the axis equations. This analytic power-law hypothesis
+has not been proved for the LP family.
+
+**Proof.** Write \(\varepsilon=1/s\), \(d=\sqrt{2c}>0\), and
+\(N_1=\ell(b-\mu)\). The axis identities give
+\[
+ k=\mu(1-\mu)\varepsilon^2+O(\varepsilon^3),\quad
+ U=\tfrac12(b-\mu(1-\mu))\varepsilon^2+O(\varepsilon^3),\quad
+ V=\tfrac12\ell\mu\varepsilon+O(\varepsilon^2),\quad
+ N=c+N_1\varepsilon+O(\varepsilon^2).
+\]
+Positivity of \(U\) proves the lower bound.
+
+For the upper bound, normalize the normal development by
+\[
+ u=(\log H,\log(a/w),\log(b_{\rm orb}/B),F-F_0-\mathcal U),
+\]
+where \(B=(2/d)\tanh(dt/2)\), \(\mathcal U=2\log\cosh(dt/2)\),
+and \(b_{\rm orb}\) denotes the second orbit radius.
+The normalized logarithmic equations have analytic coefficients
+in \(\varepsilon\), since
+\(\partial_s=-\varepsilon^2\partial_\varepsilon\);
+the nonanalytic values of \(\log w\) and \(F_0\) enter only
+through their analytic derivatives. The general axis jets are
+\[
+ H=1-\tfrac12Ut^2+\cdots,\quad
+ a/w=1-\tfrac12Vt^2+\cdots,\quad
+ b_{\rm orb}/t=1-\tfrac16Nt^2+\cdots,\quad
+ F-F_0=\tfrac12(U+V+N)t^2+\cdots.
+\]
+The parameter-dependent Fuchsian construction used in Section 7
+therefore gives a common initial interval with
+\(u=\varepsilon u_1+\varepsilon^2u_2+O(\varepsilon^3)\).
+The actual steady soliton is real analytic [K, Corollary 1.3],
+as is its potential in geodesic normal coordinates. Its fixed axis
+and normal exponential gauge are analytic as well. Uniqueness of
+the normal recurrence therefore identifies its germ with this
+parameter-dependent solution.
+In particular it does not replace \(V\) by \(U\).
+
+Put \(D=d\coth(dt)\), \(L=d\operatorname{csch}(dt)\).
+At first order \(h_1=0\), and the angular and second-radius
+corrections satisfy
+\[
+ \alpha_1''+D\alpha_1'=-\ell\mu,\qquad
+ \beta_1=N_1\left(-\frac1{d^2}+
+                    \frac{t}{d\sinh(dt)}\right).
+\]
+Thus \(\alpha_1'\to-\ell\mu/d\),
+\(\beta_1\to-N_1/d^2\), and \(\beta_1'\) decays exponentially
+up to a polynomial factor. If \(Q_j\) is the sum of the four
+components of \(u_j\), the second-order equations include
+\[
+ \beta_2''+D\beta_2'+LQ_2'
+       =\ell\beta_1-\beta_1'Q_1',\qquad
+ Q_2''=-2L\beta_2'-(\alpha_1')^2-(\beta_1')^2.
+\]
+The homogeneous normal subsystem is stable plus a constant mode.
+These equations give polynomial growth of the second-order
+coefficients, \(Q_2'=O(1+t)\), and
+\[
+ \beta_2'\longrightarrow-\ell N_1/d^3.
+\]
+Unknown second-order axis coefficients affect transient terms,
+not this limit. For completeness, with \(\omega=W'(0)\), the other
+second-order equations are
+\[
+ h_2''+Dh_2'=-[b-\mu(1-\mu)],\qquad
+ \alpha_2''+D\alpha_2'
+ =\mu(1-\mu+b)+\ell(\omega+\alpha_1)-\alpha_1'Q_1'.
+\]
+They give \(h_2=O(1+t)\), \(\alpha_2=O((1+t)^2)\),
+\(\beta_2=O(1+t)\), and \(Q_2=O((1+t)^2)\);
+hence every component of \(u_2\), including \(f_2\), is polynomially
+bounded.
+
+Here the expansion must again be controlled on a growing interval.
+Fix \(\varepsilon_0>0\) and use \(z=\varepsilon/\varepsilon_0\)
+on a fixed complex disc around \(1\).
+Retain \(X=(h,u_t,Z)\), with \(Z=u_s\).
+The spatial principal coefficients are \(O(\varepsilon_0)\),
+because \(\partial_s=-\varepsilon_0z^2\partial_z\).
+The zero-parameter linear system is
+\[
+\begin{split}
+ p_h'&=-Dp_h+\ell Z_h,\qquad
+ p_a'=-Dp_a-\ell Z_a,\\
+ p_b'&=-Dp_b-Lq-\ell Z_b,\qquad q'=-2Lp_b,\\
+ h'&=p_h,\qquad Z'=0,
+\end{split}
+\]
+where \(q=p_h+p_a+p_b+p_f\).
+Its \((p,Z)\) subsystem has a bounded forward propagator;
+the \(h\) component has at most linear growth.
+Equivalently its full propagator is bounded by \(C(1+t-\sigma)\).
+This follows by solving the stable equations and using the
+integrability of \(L,D-d\); the constant \(Z_b\) forcing enters
+the stable \(p_b\) equation, while the \(q\) coupling is integrable.
+
+On \(t\le T=\gamma\log(1/\varepsilon_0)\), use
+\(C_T=C(1+T)\) as the propagator bound in Duhamel's analytic
+majorant. The scalar transport argument of Proposition 7.11,
+with its spatial and state majorants retained, now has source
+\(O(C_T\varepsilon_0)\), derivative coefficient
+\(O(C_T\varepsilon_0)\), and quadratic coefficient \(O(C_T)\).
+Its amplitude is \(O(\varepsilon_0(1+T)^2)\);
+its radius loss is \(O(\varepsilon_0(1+T)^2)\).
+The nonlinear amplification also tends to zero, since
+\(\varepsilon_0\) times any fixed polynomial in \(T\) tends to
+zero.
+
+For the second-order approximation retain its exact derivative
+\[
+ Z_{\rm app}=-\varepsilon^2u_1-2\varepsilon^3u_2.
+\]
+Its \(Z_t=\partial_s p\) equation then cancels identically,
+and the remaining residual is \(O(\varepsilon_0^3P(T))\).
+The same majorant for the error gives that order of error
+for \(u,u_t\) on a smaller fixed \(z\)-disc.
+Cauchy estimates and the physical derivative
+\(\partial_s=-\varepsilon_0z^2\partial_z\)
+improve the spatial error to \(O(\varepsilon_0^4P_1(T))\).
+This establishes a genuine logarithmic-time development, not
+a formal asymptotic substitution.
+
+Take any fixed \(\gamma>3/d\) and evaluate at
+\(t=\gamma\log s\). The preceding estimates give
+\[
+\begin{split}
+ \partial_s\log a&=\mu\varepsilon+O(\varepsilon^2P(t)),&
+ \partial_t\log a&=-\ell\mu\varepsilon/d+o(\varepsilon),\\
+ \partial_s\log b_{\rm orb}&=N_1\varepsilon^2/d^2+
+                                      o(\varepsilon^2),&
+ \partial_t\log b_{\rm orb}&=-\ell N_1\varepsilon^2/d^3+
+                                      o(\varepsilon^2).
+\end{split}
+\]
+Also \(H\to1\). Therefore
+\[
+ \langle\nabla\log a,\nabla\log b_{\rm orb}\rangle_h
+ =\frac{\mu N_1}{d^2}
+       \left(1+\frac{\ell^2}{d^2}\right)s^{-3}
+       +o(s^{-3}).
+\]
+If \(b>\mu\), then \(N_1>0\), and the mixed-circle curvature,
+the negative of this quantity, is negative.
+The estimates keep the normal development regular along the
+whole segment; a complete soliton agrees with it by analytic
+uniqueness. This contradicts positive sectional curvature and
+proves \(b\le\mu\). \(\square\)
+
+The interval in Proposition 6.7 is not empty. Neither its analytic
+expansion hypothesis nor \(c>0\) follows from the present results.
+Consequently it narrows a conditional sublinear regime without
+settling the strict boundary-orbit gap.
+
+In Example 6.5, the expansion hypotheses hold with
+\(\mu=1-2a\), \(b=B\), \(W(\varepsilon)=(1+\varepsilon^2)^{-a}\),
+and \(\ell=B\pi/2\); its limiting normal curvature is positive.
+Thus any complete positive-curvature extension of those axis data
+would require \(B\le1-2a\). For instance, the admissible choices
+\(c_0=8,\ a=1/8,\ B=1\) are excluded when
+\(\theta<6/(6+\pi^2)\), where \(c_0\) denotes the constant called
+\(c\) in that example, not the limiting normal curvature here.
+The examples satisfying \(B\le1-2a\) remain unexcluded. No member
+of this diagnostic family has been identified with an LP axis.
+
 ## 7. The remaining analytic obstacle
 
 For \(p=q=2\), the original boundary question is now the precise strict
@@ -2181,3 +2478,21 @@ criterion, not a proof that the criterion is satisfied.
   [DOI](https://doi.org/10.4310/jdg/1214443292).
   The standard bounded-curvature Ricci-flow gradient estimate is used
   for the pointwise limits in Proposition 6.4.
+
+* **[CZ]** H.-D. Cao and X.-P. Zhu, *A complete proof of the Poincaré
+  and geometrization conjectures — application of the Hamilton–Perelman
+  theory of the Ricci flow*, Asian Journal of Mathematics **10** (2006),
+  165–492. [Text](https://www.renyi.hu/~stipsicz/perelman/cao-zhu.pdf).
+  Theorems 4.1.5 and 4.2.1 supply pointed compactness and the explicit
+  Gromoll–Meyer injectivity estimate; Section 2.2 gives the tensor
+  strong maximum principle used in Proposition 6.6.
+* **[H]** R. S. Hamilton, *Four-manifolds with positive curvature operator*,
+  Journal of Differential Geometry **24** (1986), 153–179.
+  [DOI](https://doi.org/10.4310/jdg/1214440433).
+* **[K]** B. L. Kotschwar, *A local version of Bando's theorem on the
+  real-analyticity of solutions to the Ricci flow*, Bulletin of the
+  London Mathematical Society **45** (2013), 153–158.
+  [DOI](https://doi.org/10.1112/blms/bds074);
+  [text](https://arxiv.org/pdf/1111.0355).
+  Corollary 1.3 and its following observation give analyticity of
+  solitons and their vector fields.

@@ -1585,8 +1585,9 @@ continuation over all normal distances at a fixed \(s\) is used.
 
 This budget constrains the unknown region and second-axis matching.
 It does not show that the constructed germ exceeds the budget.
-A contradictory lower bound for the actual section curvature, or
-another global matching obstruction, is still missing. No
+No contradictory lower bound for the actual section curvature is
+provided by this budget. Propositions 7.11--7.12 instead obtain an
+obstruction from a change in the mixed-circle curvature sign. No
 unconditional statement about the boundary topology of the
 Lavoyer--Peachey family follows from (44).
 
@@ -1777,10 +1778,252 @@ Thus (51) contradicts positive sectional curvature. Since \(A\to0\)
 if and only if \(\theta\to0\), this proves the proposition.
 \(\square\)
 
-No explicit value of \(\theta_0\) is supplied. The possibility of a
-positive-curvature complete extension for the remaining parameters,
-and the strict fixed-surface gap for the actual complete examples,
-are not decided here.
+No explicit value of \(\theta_0\) is supplied. The following proposition treats the remaining parameters for this
+germ. The strict fixed-surface gap for the actual complete examples
+is not decided here.
+
+### Proposition 7.12 (the end obstruction for every parameter)
+
+For every \(0<\theta<1\), the specific analytic germ of Proposition
+7.4 has no complete steady gradient Ricci soliton extension with
+positive sectional curvature. Its regular analytic normal development
+has negative mixed-circle curvature along a joint end regime
+\(s,t\to\infty\).
+
+This extends the nonextension conclusion of Proposition 7.11 to all
+parameters. It remains a statement about the constructed cigar-axis
+germ, not about the unknown axis data of the Lavoyer--Peachey examples.
+
+**Proof.** Fix \(\theta\), and put
+\[
+ d=2/A=\sqrt{4/\theta-1}>\sqrt3,\qquad
+ \kappa=\frac{\sqrt{d^2+8}-d}{2}\in(0,1),\qquad \xi=e^{-2s}.
+\]
+Subtract the product end and write
+\[
+ u=(h,\alpha,\beta,f)
+   =(\log H,\log a,\log(b/B),F-3s-U),
+\]
+where \(B=A\tanh(t/A)\) and \(U=2\log\cosh(t/A)-3\log2\).
+Let \(p=u_t\), \(W=\xi u_\xi\). At \(\xi=0\), these corrections vanish.
+Choose a fixed \(t_0>0\) in the uniform tube. Its analytic end data
+give convergent series in \(\xi\) at \(t_0\).
+
+We first obtain a sharper nonlinear end estimate than the general
+Cauchy-radius bound in Proposition 7.9. For the \(n\)-th linear
+harmonic, set \(q=h+\alpha+\beta+f\) and \(a_n=4n^2-6n\).
+The logarithmic equations give exactly
+\[
+\begin{split}
+ \alpha''+D\alpha'+a_n\alpha&=0,\\
+ \beta''+D\beta'+a_n\beta+Lq'&=0,\\
+ q''+2L\beta'&=0,\\
+ h''+Dh'-a_nh+4n^2q&=0,
+\end{split}
+ \tag{52}
+\]
+where \(D=d\coth(dt)\), \(L=d\operatorname{csch}(dt)\).
+Introduce the rescaled parameter \(\eta=\xi e^{2t}\).
+Here \(p\) retains the \(t\)-derivative at fixed \(\xi\);
+the rescaled derivative of \(u\) at fixed \(\eta\) is
+\(p-2\eta u_\eta\).
+On coefficients in \(\eta\), the generator of (52) is shifted by
+\(-2nI\). Use the mode norm
+\(\|(u_n,p_n)\|_n=n|u_n|+|p_n|\).
+
+The limiting constant shifted generators \(G_n\), obtained by
+putting \(D=d,L=0\), have uniform semigroup bounds
+\[
+ \|e^{G_n\ell}\|_n\le
+ \begin{cases}
+ C e^{-\delta_1\ell},&n=1,\quad\delta_1=2-\kappa>1,\\
+ C e^{-\delta_*\ell},&n\ge2,
+ \end{cases}
+ \qquad \ell\ge0,
+ \tag{53}
+\]
+for some \(\delta_*>2\).
+Here is a verification including uniformity in \(n\).
+For \(n\ge2\), the only positive unshifted root is
+\[
+ \lambda_n=\frac{-d+\sqrt{d^2+4a_n}}2
+\]
+from the \(h\)-equation. The polynomial \(x^2+dx-a_n\) is positive
+at \(x=2n-2\), since its value there is
+\(2((d-1)n+2-d)>0\). Thus \(2n-\lambda_n>2\);
+these gaps tend to \((d+3)/2>2\). Their infimum is strictly above
+\(2\). The \(\alpha,\beta\) roots have nonpositive real parts before
+the shift. Remove the forcing of \(h\) by \(q''=0\) using
+\[
+ \widehat h=h-c_nq-e_nq',\qquad
+ c_n=4n^2/a_n,\quad e_n=dc_n/a_n.
+\]
+This transformation and its inverse are uniformly bounded in the
+mode norm. For large \(n\), the oscillator and hyperbolic blocks
+have uniformly bounded eigenvector transforms in that norm.
+The remaining \(q\) block is not diagonalizable: its bound is
+\(C(1+n\ell)e^{-2n\ell}\), which is uniform at any smaller fixed
+decay rate. Finitely many modes, including repeated roots, are
+handled separately. One may choose \(\delta_*\) strictly between
+\(2\) and both \(4\) and the infimum of the displayed gaps.
+For \(n=1\), the only growing roots are the simple root \(\kappa\)
+in the \(\alpha,\beta\) blocks; the other blocks are stable or
+polynomial before the shift. This gives the first line of (53).
+Finally, the time-dependent shifted matrices differ from \(G_n\)
+by an operator bounded by \(Ce^{-dt}\), uniformly in the mode norm.
+
+We spell out the analytic estimate because a generic exponential
+Cauchy bound would be insufficient. Replace each mode norm by
+\[
+ N_n(X)=\sup_{\ell\ge0}e^{\delta_n\ell}
+                         \|e^{G_n\ell}X\|_n,
+ \qquad \delta_n=\delta_1\ (n=1),\quad
+        \delta_n=\delta_*\ (n\ge2).
+\]
+By (53), these norms are uniformly equivalent to the original mode
+norms, and the constant generators are contractive at the stated
+rates. The exact time-dependent linear terms add \(b(t)N_n\) to
+the upper Dini derivative, with \(\int_{t_0}^\infty b(t)\,dt<\infty\).
+
+Let
+\[
+ E=\sum_{n\ge1}N_n(X_n)\rho^n,\qquad
+ \mathcal DE=\sum_{n\ge1}nN_n(X_n)\rho^n.
+\]
+In the exact system the nonlinear forcing occurs only in the
+\(p\)-equations. It consists of analytic quadratic terms in
+\(h,p,W\), and terms with one Euler derivative of \(W\) multiplied
+by a correction vanishing at zero. Its norm is therefore bounded,
+for small \(E\), by \(CE^2+CE\mathcal DE\).
+There is no extra factor \(n\) from a nonlinear forcing in the
+\(u\)-equation, since that equation is exactly
+\(u_t=p-2\eta u_\eta\).
+Consequently
+\[
+ D^+E\le(-\delta_1+b(t))E+CE^2+
+                  \bigl(\rho'/\rho+CE\bigr)\mathcal DE.
+ \tag{54}
+\]
+One may also absorb \(CE^2\) into \(CE\mathcal DE\), since
+\(\mathcal DE\ge E\).
+Initially \(E=O(\rho_0)\), and the sum over \(n\ge2\) is
+\(O(\rho_0^2)\). Choose \(\rho_0\) sufficiently small and prescribe
+\(\rho'/\rho=-C_1E_{\rm bd}(t)\), where
+\(E_{\rm bd}(t)=C_2\rho_0 e^{-\delta_1(t-t_0)}\).
+The constants absorb the finite integrating factor from \(b\).
+An integral bootstrap in (54) gives \(E\le E_{\rm bd}\).
+Because \(E_{\rm bd}\) is integrable, \(\rho\) has a positive limit.
+
+These estimates can first be applied to finite coefficient
+truncations. Their equations are triangular: the zero mode
+vanishes and every nonlinear term is at least quadratic.
+The bounds are independent of the truncation, and give convergence
+of the exact analytic solution on every smaller disc for all
+\(t\ge t_0\).
+
+There is no nonlinear forcing in mode \(1\). For
+\(R=\sum_{n\ge2}N_n(X_n)\rho^n\), the forcing independent of \(R\)
+is therefore \(O(\rho_0^2e^{-2\delta_1(t-t_0)})\).
+The same radius decrease absorbs the derivative terms containing
+\(R\), giving
+\[
+ D^+R\le(-\delta_*+b(t)+CE)R+
+                 C\rho_0^2e^{-2\delta_1(t-t_0)}.
+\]
+Since both \(\delta_*\) and \(2\delta_1\) exceed \(2\),
+\[
+ R\le C\rho_0^2e^{-2(t-t_0)}.
+\]
+Schwarz and Cauchy estimates on a smaller fixed \(\eta\)-disc yield
+\[
+ \begin{split}
+ u(\xi,t)-\xi u_1(t)&=O(\xi^2e^{2t}),\\
+ p(\xi,t)-\xi p_1(t)&=O(\xi^2e^{2t}),\\
+ W(\xi,t)-\xi W_1(t)&=O(\xi^2e^{2t}),
+ \end{split}
+ \qquad |\xi|e^{2t}<r_*.
+ \tag{55}
+\]
+The relation \(W=\xi u_\xi\) persists, and the mixed soliton
+equation vanishes by analytic continuation from the initial tube.
+Thus (55) controls an exact nonlinear soliton development.
+
+Its first modes are those in Lemma 7.6 and Proposition 7.8:
+\(\alpha_1=-y,\ \beta_1=-v,\ h_1'=-z\).
+They satisfy
+\[
+ y\sim C_y e^{\kappa t},\quad y'\sim\kappa C_y e^{\kappa t},
+ \qquad
+ v\sim C_v e^{\kappa t},\quad v'\sim\kappa C_v e^{\kappa t},
+ \qquad C_y,C_v>0,
+ \tag{56}
+\]
+and \(h_1=O(t)\).
+For clarity, the mode-\(1\) bound gives \(O(e^{\kappa t})\)
+growth. In (36), the forcing of the \(z\)-equation is then
+integrable, because \(\kappa<d\); hence \(z'\) is integrable and
+\(z\) has a finite limit. The Riccati equation for \(y'/y\) gives
+an integrable difference from \(\kappa\), establishing \(C_y>0\).
+Variation of constants in the \(v\)-equation gives a finite
+growing-mode coefficient, since its additional forcing and
+coefficient errors have integrable growing-mode projections.
+At any fixed positive time, comparison with a sufficiently small
+positive multiple of \(y\) gives \(v\ge c y,\ v'\ge c y'\)
+thereafter, using \(L^2v+Lz/2>0\).
+Thus the coefficient \(C_v\) is positive. This proves (56).
+
+Choose
+\[
+ \frac1{d+\kappa}<\gamma<\frac12,\qquad
+ t=\gamma\log(1/\xi).
+ \tag{57}
+\]
+Such a choice is possible since \(d+\kappa>2\).
+Set \(\varepsilon=\xi e^{\kappa t}\) and \(r=\xi^2e^{2t}\).
+Then \(\xi e^{2t}\to0\), \(r/\varepsilon\to0\), and (55) applies.
+Expanding the normalized gradient product, using
+\(\partial_s=-2\xi\partial_\xi\), gives
+\[
+ \frac{\langle\nabla a,\nabla b\rangle_h}{ab}
+ =
+ \xi^2(4yv+y'v')-\xi Ly'
+ +O(\varepsilon r+r^2+rL)+o(\varepsilon^2).
+ \tag{58}
+\]
+The last term includes the \(H^{-2}\) correction:
+\(\xi h_1+r\to0\).
+By (56), the positive term in (58) is asymptotic to
+\((4+\kappa^2)C_yC_v\varepsilon^2\).
+The negative term divided by \(\varepsilon^2\) tends to zero,
+since it is \(O(\xi^{-1}e^{-(d+\kappa)t})\).
+The error \(rL/\varepsilon^2\) is
+\(O(e^{(2-d-2\kappa)t})\), which tends to zero because
+\(d+2\kappa=\sqrt{d^2+8}>2\). The other errors tend to zero
+relative to \(\varepsilon^2\) as well. Therefore
+\[
+ K(e_\phi,e_\psi)
+ \sim-(4+\kappa^2)C_yC_v\,\xi^2e^{2\kappa t}<0
+ \tag{59}
+\]
+along (57).
+
+For each sufficiently small positive \(\xi\), the uniform estimates
+keep \(H,a,b\) nonzero along the entire developed normal segment
+away from its initial polar axis; the initial segment is covered
+by the original tube. Thus there is no intervening focal or
+orbit-collapse degeneration. In any complete steady gradient
+Ricci soliton extension, analytic uniqueness identifies this
+regular development with the normal exponential development of
+the germ, without requiring global injectivity. Equation (59)
+contradicts positive sectional curvature. \(\square\)
+
+The constructed local solitons are therefore not counterexamples
+to the complete positive-curvature problem, for any parameter.
+Transferring this obstruction to the actual complete family
+would require new information about its axis profile and end
+expansion. The condition \(w(s)/s\to0\) alone does not supply a
+bounded cigar radius, the product end, or the two specific growing
+mode coefficients used above.
 
 The local construction is not a counterexample to the complete-soliton
 conjecture. It proves that strict ambient curvature, the exact soliton
@@ -1788,9 +2031,9 @@ PDE on a neighborhood of the complete fixed surface, and the prescribed
 tip ratio still do not force the strict total-curvature gap. The
 global issue is complete ambient soliton extension with the required
 curvature conditions, rather than finite jets or local convergence.
-Proposition 7.11 excludes such a positive-curvature extension for this
-specific germ when the parameter is sufficiently small; the remaining
-parameter range is not decided. A totally geodesic three-dimensional fixed submanifold also
+Proposition 7.12 excludes such a positive-curvature steady soliton
+extension for this specific germ at every parameter. The original
+strict-gap question for the actual complete examples remains open. A totally geodesic three-dimensional fixed submanifold also
 does not automatically inherit the steady equation: its intrinsic Ricci
 tensor omits normal-curvature contributions. Three-dimensional soliton
 classification cannot be applied to it on total geodesicity alone.

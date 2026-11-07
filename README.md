@@ -52,7 +52,7 @@ Research on complete steady gradient Ricci solitons with the standard
   \(\int_S K_S\,dA\le4\arctan(3/\sqrt{4/\theta-1})\).
   Gauss--Bonnet on potential-level quarter-disks proves the bound.
   This section is not the fixed surface in the boundary-orbit criterion;
-  the condition does not yet exclude complete extension.
+  the budget alone does not exclude complete extension.
 
 * **Small-parameter obstruction to completion:** for sufficiently small
   \(\theta\), the constructed cigar-axis germ develops negative mixed-circle
@@ -62,6 +62,14 @@ Research on complete steady gradient Ricci solitons with the standard
   has no complete positively curved steady soliton extension in that range.
   This does not identify the axis data of the Lavoyer--Peachey examples
   or prove their strict curvature gap.
+
+* **Nonextension for every parameter:** the end-mode argument excludes
+  complete positively curved steady soliton extensions of this same germ
+  for every \(0<\theta<1\). Uniform shifted-mode semigroup bounds and a
+  shrinking analytic-radius estimate control the nonlinear remainder
+  where the mixed-circle curvature becomes negative. The actual
+  Lavoyer--Peachey axis profiles are not identified with this germ,
+  so their strict-gap problem remains open.
 
 See [PROOF.md](PROOF.md) for complete arguments, source statements, and
 precise hypotheses. No numerical experiment is used.

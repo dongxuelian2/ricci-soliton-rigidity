@@ -1478,8 +1478,8 @@ sharp, and (38) does not imply a complete extension.
 
 ### Proposition 7.10 (a global curvature budget for a complete extension)
 
-Suppose the analytic germ of Proposition 7.4 admits a complete extension
-with the standard \(O(2)\times O(2)\) action and positive sectional
+Suppose the analytic germ of Proposition 7.4 admits a complete steady
+gradient Ricci soliton extension with the standard \(O(2)\times O(2)\) action and positive sectional
 curvature. Let \(S\) be the complete reflected two-dimensional section
 from Section 4, and let \(Q\) be one of its quadrants. Then
 \[
@@ -1590,12 +1590,207 @@ another global matching obstruction, is still missing. No
 unconditional statement about the boundary topology of the
 Lavoyer--Peachey family follows from (44).
 
+### Proposition 7.11 (loss of positive curvature for the small-parameter germ)
+
+There is \(\theta_0>0\) such that, for \(0<\theta<\theta_0\), the
+specific analytic germ of Proposition 7.4 has no complete steady
+gradient Ricci soliton extension with positive sectional curvature. In fact, its regular analytic
+normal development already has negative mixed-circle sectional
+curvature at a finite normal distance.
+
+This excludes complete positive-curvature extension of the constructed
+cigar-axis germ for small \(\theta\). It does **not** establish the
+strict curvature gap for the actual Lavoyer--Peachey family, whose
+axis data have not been identified with this germ.
+
+**Proof.** Set
+\[
+ A=\frac2{\sqrt{4/\theta-1}},\qquad \tau=t/A,\qquad
+ S(s)=\operatorname{sech}^2s,\quad w(s)=\tanh s.
+\]
+Fix \(s_0>0\) and a small complex \(s\)-disc around it avoiding the
+zeros and poles of \(w\). All estimates below are on a smaller fixed
+disc. Put
+\[
+ L=2\operatorname{csch}(2\tau),\quad D=2\coth(2\tau),\quad
+ U=2\log\cosh\tau.
+\]
+The rescaled logarithmic equations in Proposition 7.8 have spatial
+second derivatives multiplied by \(A^2\). After removing
+\(\log A\) from \(\log b\), all coefficients and axis data are
+analytic at \(A=0\). The Fuchsian majorant argument of Proposition
+7.4 therefore applies with \(A\) as an additional analytic parameter,
+on a common small \(\tau\)-interval. The indicial matrix is unchanged;
+the rescaled free normal curvature is \(A^2N=2+A^2S/2\).
+Uniqueness makes the four normalized logarithms even in \(A\).
+
+Write
+\[
+ v=\bigl(\log H,\log(a/w),\log(b/(A\tanh\tau)),F-F_0-U\bigr).
+\]
+Its order-\(A^2\) coefficient is
+\[
+ v=A^2S(s)\bigl(h(\tau),h(\tau),k(\tau),f(\tau)\bigr)+O(A^4),
+ \tag{47}
+\]
+where
+\[
+ h=-\tfrac12\log\cosh\tau,\qquad
+ k=\tfrac14\left(\frac{\tau}{\sinh2\tau}-\tfrac12\right),\qquad
+ f=\log\cosh\tau+\tfrac14\tau\tanh\tau.
+ \tag{48}
+\]
+Here (47) is initially on a fixed small interval.
+For direct verification, set \(q=2h'+k'+f'\). The coefficient
+equations reduce to
+\[
+ h''+Dh'=-1,\qquad
+ k''+Dk'+Lq=0,\qquad q'=-2Lk',
+\]
+and
+\[
+ q=\tfrac14\bigl(\coth2\tau-2\tau\operatorname{csch}^2(2\tau)\bigr).
+\]
+The mixed equation is \(h'+2q+2Lk=0\). These identities and the
+regular axis expansions verify all the coefficient equations.
+The apparent singularities at \(\tau=0\) are removable.
+
+We next justify using (47) on a growing interval; fixed-time
+parameter dependence alone would not suffice. Choose a fixed small
+\(\tau_0>0\). Set \(p=v_\tau\), \(W=A v_s\), and retain the state
+\(X=(v_h,p,W)\). The other three values of \(v\) do not enter the
+equations, and can be recovered by integration of \(p\). The exact
+first-order system has the form
+\[
+ X_\tau=M(\tau)X+A\,\mathcal B(\tau,s,A,X)X_s+
+                    \mathcal R(\tau,s,A,X),
+ \tag{49}
+\]
+where, uniformly for \(\tau\ge\tau_0\) on fixed complex neighborhoods,
+\[
+ \mathcal R=O(A^2)+O(A X)+O(X^2).
+\]
+This follows directly by substituting \(v_s=W/A\) into the
+logarithmic equations: \(A^2v_{ss}=A W_s\), the products of two
+spatial derivatives give quadratic \(W\)-terms, and cross terms
+with the fixed axis derivatives are \(O(AW)\).
+Also \(W_\tau=A p_s\). The coefficients are uniformly analytic:
+\(D,L\) and their needed derivatives are bounded on a common narrow
+complex time strip away from zero.
+
+The \(A=0\) linear equations for \(p\) are
+\[
+\begin{split}
+ p_h'&=-Dp_h,&p_a'&=-Dp_a,\\
+ p_b'&=-(D+L)p_b-L(p_h+p_a+p_f),\\
+ p_f'&=-p_h'-p_a'-p_b'-2Lp_b .
+\end{split}
+\]
+The remaining equations are \(v_h'=p_h\), \(W'=0\).
+Their forward fundamental matrices have a common bound for
+\(\tau\ge\sigma\ge\tau_0\). Indeed \(p_h,p_a\) decay at least at rate \(2\). If
+\(r=p_h+p_a+p_b+p_f\), the remaining subsystem is
+\(p_b'=-Dp_b-Lr,\ r'=-2Lp_b\), a perturbation of
+\(\operatorname{diag}(-2,0)\) by an integrable matrix.
+Variation of constants and integral Gronwall give a uniform bound;
+integrating the decaying \(p_h\) also bounds \(v_h\).
+In particular, one must retain this bound, rather than replacing it
+by an exponentially growing estimate in \(\tau\).
+
+For completeness, the analytic estimates from (49) can be obtained
+by a scalar majorant. Duhamel's formula with the bounded propagator,
+followed by coefficientwise majorization in the \(s\)-disc, is bounded
+by an analytic scalar transport equation
+\[
+ z_\tau=\frac{C\phi(x)}{(1-z/\rho)^m}
+       \{A^2+Az+z^2+A(1+z)z_x\},
+ \qquad z(\tau_0,x)=C A^2\phi(x),
+ \tag{50}
+\]
+after increasing fixed constants. Here
+\(\phi(x)=(1-x/r_0)^{-m}\), for a fixed integer \(m\ge1\),
+majorizes the analytic coefficient bounds on a larger disc, and
+\(\rho>0\) is fixed. The rational factor supplies a coefficientwise
+majorant for analytic dependence on the state. It stays bounded
+while \(z\) is in a sufficiently small fixed disc.
+On a smaller disc, its characteristics move by \(O(A\tau)\);
+along them the scalar amplitude is
+\(O(A^2(1+\tau))\) for
+\(\tau\le2\log(1/A)\). Both bounds follow from the scalar
+differential inequalities in (50), since
+\(A\log(1/A)\to0\). They keep the characteristics inside the
+larger disc and the amplitude inside the chosen small polydisc.
+Thus the analytic majorant constructs and bounds one compatible
+solution throughout this growing interval.
+
+Insert the approximation (47)--(48) into the retained state, including
+\(W=A^3\partial_s[S(h,h,k,f)]\). Its residual in (49) is
+\(O(A^4P(\tau))\) for a fixed polynomial \(P\): all order-\(A^2\)
+terms cancel, the leading \(W\)-equation cancels, and (48) and their
+needed derivatives have at most polynomial growth.
+Its initial error at \(\tau_0\) is \(O(A^4)\).
+The same Duhamel majorant for the error has source
+\(O(A^4P(\tau))\), spatial derivative coefficient \(O(A)\), and
+remaining linear coefficients \(O(A)+O(A^2P(\tau))\).
+Characteristics and Gronwall therefore bound this error by
+\(O(A^4P_1(\tau))\) on a smaller disc throughout the same interval.
+Recovering the omitted logarithms by integrating \(p\), and using
+Cauchy estimates for \(s\)-derivatives, only changes the polynomial.
+Consequently (47) holds there with error
+\(O(A^4P_2(\tau))\), including its first \(s\)- and
+\(\tau\)-derivatives. The constraint \(W=A v_s\) persists by its
+evolution equation. The mixed soliton equation remains zero by
+analytic continuation from the initial germ.
+
+Now take \(\tau_A=2\log(1/A)\). Equations (47)--(48) give, at \(s_0\),
+\[
+\begin{split}
+ a_s&=S+o(1),&
+ a_t&=-\tfrac12 A wS+o(A),\\
+ b_s&=\tfrac14 A^3wS+o(A^3),&
+ b_t&=O\!\left(A^4P_3(\log(1/A))\right).
+\end{split}
+\]
+We used \(h'\to-1/2\), \(k\to-1/8\),
+\(L(\tau_A)=O(A^4)\), and
+\(k'(\tau_A)=O(A^4\log(1/A))\).
+Also \(H\to1\) and \(ab/A\to w>0\). Hence
+\[
+ \langle\nabla a,\nabla b\rangle_h
+ =\frac{a_sb_s}{H^2}+a_tb_t
+ =\tfrac14A^3wS^2+o(A^3)>0.
+\]
+The mixed-circle curvature formula (8) yields
+\[
+ K(e_\phi,e_\psi)
+ =-\frac{\langle\nabla a,\nabla b\rangle_h}{ab}
+ =-\tfrac14 A^2\operatorname{sech}^4(s_0)+o(A^2)<0.
+ \tag{51}
+\]
+The uniform estimates keep \(H,a,b\) nonzero along the whole
+developed segment away from the initial polar axis.
+In any complete steady gradient Ricci soliton extension with positive
+sectional curvature, the normal geodesics
+exist up to this finite distance, and analytic uniqueness identifies
+their regular development with the continuation just constructed.
+Thus (51) contradicts positive sectional curvature. Since \(A\to0\)
+if and only if \(\theta\to0\), this proves the proposition.
+\(\square\)
+
+No explicit value of \(\theta_0\) is supplied. The possibility of a
+positive-curvature complete extension for the remaining parameters,
+and the strict fixed-surface gap for the actual complete examples,
+are not decided here.
+
 The local construction is not a counterexample to the complete-soliton
 conjecture. It proves that strict ambient curvature, the exact soliton
 PDE on a neighborhood of the complete fixed surface, and the prescribed
 tip ratio still do not force the strict total-curvature gap. The
-unresolved distinction is a complete ambient extension with the required
-curvature conditions, rather than finite jets or local convergence. A totally geodesic three-dimensional fixed submanifold also
+global issue is complete ambient soliton extension with the required
+curvature conditions, rather than finite jets or local convergence.
+Proposition 7.11 excludes such a positive-curvature extension for this
+specific germ when the parameter is sufficiently small; the remaining
+parameter range is not decided. A totally geodesic three-dimensional fixed submanifold also
 does not automatically inherit the steady equation: its intrinsic Ricci
 tensor omits normal-curvature contributions. Three-dimensional soliton
 classification cannot be applied to it on total geodesicity alone.

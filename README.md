@@ -45,15 +45,23 @@ Research on complete steady gradient Ricci solitons with the standard
   Thus finite-width thresholds satisfy \(s_T\le s_*+C_*T\).
   The proof combines fixed-factor analytic Cauchy restarts with exponential
   curvature lower bounds and a Schur-complement estimate. The complementary
-  region, second singular-orbit matching, and ambient completeness remain
-  unresolved. A fixed \(s\) still permits only a finite normal interval.
+  region and general second singular-orbit matching remain unresolved. A fixed \(s\) still permits only a finite normal interval.
 
-* **Necessary global curvature budget:** any complete positively curved
+* **Necessary global curvature budget:** any complete positively curved steady soliton
   extension of the constructed germ must have reflected-section curvature
   \(\int_S K_S\,dA\le4\arctan(3/\sqrt{4/\theta-1})\).
   Gauss--Bonnet on potential-level quarter-disks proves the bound.
   This section is not the fixed surface in the boundary-orbit criterion;
   the condition does not yet exclude complete extension.
+
+* **Small-parameter obstruction to completion:** for sufficiently small
+  \(\theta\), the constructed cigar-axis germ develops negative mixed-circle
+  sectional curvature at \(t=2A\log(1/A)\), where
+  \(A=2/\sqrt{4/\theta-1}\). A uniform logarithmic-time analytic estimate
+  proves this is an actual curvature sign change. Consequently this germ
+  has no complete positively curved steady soliton extension in that range.
+  This does not identify the axis data of the Lavoyer--Peachey examples
+  or prove their strict curvature gap.
 
 See [PROOF.md](PROOF.md) for complete arguments, source statements, and
 precise hypotheses. No numerical experiment is used.

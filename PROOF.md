@@ -886,9 +886,9 @@ neighborhood, have strictly positive curvature operator.
 The fixed surface still has \(w(s)=\tanh s\), total curvature \(2\pi\),
 and tip ratio \(\lambda_p/\lambda_q=\theta\).
 
-The ambient neighborhood is **not asserted complete**. Neither a
-uniform neighborhood width at infinity nor a complete extension with
-positive curvature has been established.
+The ambient neighborhood is **not asserted complete**.
+Proposition 7.5 below obtains a uniform neighborhood width, but a
+complete positive-curvature extension remains open.
 
 **Proof.** First fix \(s_0>0\). Put \(D=t\partial_t\) and
 \[
@@ -984,6 +984,161 @@ Their axis curvature operator is exactly that of Proposition 7.1,
 so positivity holds after shrinking this neighborhood pointwise.
 Its induced fixed-surface metric is unchanged and complete.
 No step establishes ambient completeness. \(\square\)
+
+### Proposition 7.5 (uniform positive-curvature tube and its end)
+
+For each fixed \(0<\theta<1\), the solution in Proposition 7.4 is
+defined with positive curvature operator on a tube
+\[
+ s\ge0,\qquad 0\le t<\varepsilon
+\]
+for some constant \(\varepsilon>0\) depending on \(\theta\), with the
+usual smooth circle collapses at \(s=0\) and \(t=0\).
+Put \(c=2/\theta-1/2\) and \(A=\sqrt{2/c}\). On any smaller fixed tube,
+as \(s\to\infty\), its metric coefficients converge exponentially to
+\[
+ g_\infty=ds^2+d\phi^2+dt^2+B(t)^2d\psi^2,\qquad
+ B(t)=A\tanh(t/A),
+ \tag{29}
+\]
+and
+\[
+ F(s,t)-3s\longrightarrow
+       -3\log2+2\log\cosh(t/A).
+ \tag{30}
+\]
+The error is \(O(e^{-2s})\), also after any fixed number of
+\(s\)-derivatives and Cartesian normal derivatives.
+Thus the end of this tube approaches a flat cylinder times a cigar.
+This supplies neither a complete ambient manifold nor an extension
+beyond the fixed normal radius.
+
+**Proof.** Write \(\xi=e^{-2s}\). This is a parameter for the metric
+coefficients in the \(ds,d\phi\) and normal frames; the metric is not
+claimed to extend nondegenerately across \(\xi=0\).
+The axis data satisfy
+\[
+ w=\frac{1-\xi}{1+\xi},\qquad
+ S=\frac{4\xi}{(1+\xi)^2},\qquad
+ F_0-3s=-3\log2+3\log(1+\xi).
+\]
+They are analytic at \(\xi=0\), and \(w(0)=1\).
+In the proof of Proposition 7.4, replace each spatial derivative by
+\(\partial_s=-2\xi\partial_\xi\).
+The potential enters the equations through derivatives, so the
+affine part \(3s\) introduces only the constant \(3\).
+All coefficients and the compatible finite jet are analytic in
+\(\xi\). The same indicial matrix and Lemma 7.3 therefore give
+jointly analytic metric coefficients and \(F-3s\) near
+\((\xi,t)=(0,0)\), with a uniform positive normal radius.
+For \(\xi>0\), uniqueness identifies this solution with Proposition
+7.4's solution.
+
+At \(\xi=0\), the initial jets are \(H=1+O(t^4)\),
+\(a=1+O(t^4)\),
+\(b/t=1-ct^2/6+O(t^4)\), and
+\(F-3s=-3\log2+ct^2/2+O(t^4)\).
+The product (29), with potential (30) plus \(3s\), satisfies the exact
+steady equation and these data. Indeed its cigar curvature is
+\(c\,\operatorname{sech}^2(t/A)\), and the cigar potential has that
+curvature times the cigar metric as Hessian.
+Formal uniqueness, followed by analyticity, identifies the entire
+limiting solution. Analyticity in \(\xi\) now proves the stated
+exponential convergence on smaller fixed tubes. The same conclusion
+holds after the stated derivatives, since
+\(\partial_s=-2\xi\partial_\xi\).
+
+Uniform positivity needs more than convergence to this product, whose
+curvature operator has a five-dimensional kernel.
+Use an analytic orthonormal frame along a fixed normal radial ray,
+extended smoothly across \(t=0\); rotation symmetry handles the other
+normal directions. Decompose bivectors into that limiting kernel and
+the cigar two-plane. The curvature operator has the block form
+\[
+ \mathcal R(\xi,t)=
+ \begin{pmatrix}
+   \xi P(t)+O(\xi^2)&O(\xi)\\
+   O(\xi)&c\,\operatorname{sech}^2(t/A)+O(\xi)
+ \end{pmatrix}.
+\]
+All estimates are uniform on a sufficiently small closed \(t\)-interval.
+The axis curvatures \(k=2S\), \(U=V=S/2\) show
+\[
+ P(0)=\operatorname{diag}(8,2,2,2,2).
+\]
+Thus \(P(t)\ge mI\) for some \(m>0\) after shrinking the normal interval,
+and the last scalar block is bounded away from zero.
+Its Schur complement is at least
+\(\xi mI-C\xi^2I>0\) for sufficiently small \(\xi>0\).
+This proves strict positive curvature operator uniformly in normal
+radius at the end. It does not give a uniform positive curvature
+lower bound as \(s\to\infty\).
+
+The remaining finite segment of the axis is compact. Proposition
+7.4 and continuity supply a common positive normal radius there,
+including the vertex. Taking the minimum of that radius and the
+one obtained at infinity completes the proof. \(\square\)
+
+### Lemma 7.6 (a growing transverse mode without a sign obstruction)
+
+Write the first coefficient of the convergent end expansion as
+\(\log a=-\xi y(t)+O(\xi^2)\).
+On the tube of Proposition 7.5 it satisfies
+\[
+ y''+D(t)y'-2y=0,\qquad
+ D(t)=\frac{2}{A}\coth(2t/A),\qquad y(0)=2,\quad y'(0)=0.
+ \tag{31}
+\]
+The regular solution of this linear ODE extends to every \(t\ge0\).
+It satisfies \(y>0\), \((\log y)''>0\), and
+\[
+ \lim_{t\to\infty}\frac{\log y(t)}t
+   =\kappa:=\frac{\sqrt{2c+8}-\sqrt{2c}}2>0.
+ \tag{32}
+\]
+The corresponding first-order curvature block on
+\(\operatorname{span}\{e_s\wedge e_\phi,e_t\wedge e_\phi\}\) is
+\[
+ \xi
+ \begin{pmatrix}4y&-2y'\\-2y'&y''\end{pmatrix},
+ \tag{33}
+\]
+whose coefficient matrix is positive definite at every finite \(t\).
+
+**Proof.** Linearize the normalized \(\phi\phi\) steady equation about
+the product in (29). Using \(a=1-\xi y+O(\xi^2)\) and
+\(\partial_s\xi=-2\xi\) gives
+\(y''+(B'/B+\overline F')y'-2y=0\), where
+\(\overline F=2\log\cosh(t/A)\).
+Its drift is \(D(t)\) in (31). Axis data and regularity give
+\(y=2+t^2+O(t^4)\).
+The regular solution exists locally by its even power series and
+extends on \(t>0\) by linear ODE theory.
+
+Set \(q=y'/y\) while \(y>0\). Then
+\[
+ q'=2-Dq-q^2.
+\]
+The positive root \(r(t)\) of \(2-Dr-r^2=0\) increases strictly,
+because \(D'<0\). Near zero, \(q=t+O(t^3)\) and
+\(r=2t+O(t^3)\). A first crossing is impossible: at \(q=r\) one
+has \(q'=0<r'\). Nor can \(q\) cross zero, since its derivative
+there is \(2\). Hence \(0<q<r\), so \(q'>0\), and \(y\) stays
+positive. The increasing bounded function \(q\) tends to \(\kappa\):
+a smaller limit would make \(q'\) tend to a strictly positive
+constant. Integrating \(q=(\log y)'\) proves (32).
+
+The warped curvature formula \(-\nabla_h^2a/a\) gives (33).
+Its determinant is \(4y^2q'>0\) and its first entry is positive;
+at zero the matrix is \(\operatorname{diag}(8,2)\).
+\(\square\)
+
+Beyond the fixed tube, (31)--(33) describe the continued **linearized
+mode**, not an established nonlinear soliton. This particular block
+does not give a first-order curvature-loss obstruction. The mode is
+unbounded, so a perturbation estimate uniform over the whole
+transverse half-line cannot be inferred from this expansion.
+Neither fact decides nonlinear continuation or ambient completeness.
 
 The local construction is not a counterexample to the complete-soliton
 conjecture. It proves that strict ambient curvature, the exact soliton

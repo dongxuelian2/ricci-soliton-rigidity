@@ -34,8 +34,12 @@ Research on complete steady gradient Ricci solitons with the standard
   fixed surface, smoothly through the vertex, with positive curvature
   operator and any prescribed tip ratio. The surface has total curvature
   \(2\pi\). The proof combines an all-orders recurrence, Bianchi constraint
-  propagation, and an analytic convergence argument. Ambient completeness
-  and a complete positive-curvature extension remain unproved.
+  propagation, and an analytic convergence argument. A uniform-width
+  positive-curvature tube exists along the entire surface; its end
+  converges exponentially to a flat cylinder times a cigar. The first
+  transverse end mode grows exponentially without a sign obstruction in
+  its first-circle curvature block. Ambient completeness and nonlinear
+  continuation beyond the tube remain unproved.
 
 See [PROOF.md](PROOF.md) for complete arguments, source statements, and
 precise hypotheses. No numerical experiment is used.

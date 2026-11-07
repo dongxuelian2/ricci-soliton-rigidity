@@ -38,8 +38,13 @@ Research on complete steady gradient Ricci solitons with the standard
   positive-curvature tube exists along the entire surface; its end
   converges exponentially to a flat cylinder times a cigar. The first
   transverse end mode grows exponentially without a sign obstruction in
-  its first-circle curvature block. Ambient completeness and nonlinear
-  continuation beyond the tube remain unproved.
+  its first-circle curvature block.
+* **Nonlinear finite-width continuation at infinity:** for every fixed
+  finite normal width \(T\), the exact solution extends with positive
+  curvature operator to \(0\le t\le T\) once \(s\ge s_T\).
+  The proof uses a scaling-uniform analytic Cauchy argument and positivity
+  of the entire first-order kernel curvature block. No bound on \(s_T\)
+  resolves the joint large-\(s,t\) regime; ambient completeness remains open.
 
 See [PROOF.md](PROOF.md) for complete arguments, source statements, and
 precise hypotheses. No numerical experiment is used.

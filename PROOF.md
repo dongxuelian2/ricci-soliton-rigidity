@@ -1010,8 +1010,8 @@ and
 The error is \(O(e^{-2s})\), also after any fixed number of
 \(s\)-derivatives and Cartesian normal derivatives.
 Thus the end of this tube approaches a flat cylinder times a cigar.
-This supplies neither a complete ambient manifold nor an extension
-beyond the fixed normal radius.
+This proposition does not supply a complete ambient manifold;
+Proposition 7.8 below gives additional finite-width end continuation.
 
 **Proof.** Write \(\xi=e^{-2s}\). This is a parameter for the metric
 coefficients in the \(ds,d\phi\) and normal frames; the metric is not
@@ -1133,12 +1133,195 @@ Its determinant is \(4y^2q'>0\) and its first entry is positive;
 at zero the matrix is \(\operatorname{diag}(8,2)\).
 \(\square\)
 
-Beyond the fixed tube, (31)--(33) describe the continued **linearized
-mode**, not an established nonlinear soliton. This particular block
+In this lemma, (31)--(33) describe the continued **linearized mode**.
+Proposition 7.8 below supplies nonlinear end continuation at each
+fixed finite width. This particular block
 does not give a first-order curvature-loss obstruction. The mode is
 unbounded, so a perturbation estimate uniform over the whole
 transverse half-line cannot be inferred from this expansion.
 Neither fact decides nonlinear continuation or ambient completeness.
+
+### Lemma 7.7 (continuation along a characteristic parameter boundary)
+
+Consider a finite-dimensional first-order analytic system
+\[
+ \partial_tY=G(t,\xi,Y)+\xi\,B(t,\xi,Y)\partial_\xi Y.
+ \tag{34}
+\]
+Suppose \(Y_0(t)\) is an analytic solution of
+\(Y_0'=G(t,0,Y_0)\) on a neighborhood of a compact real interval
+\([t_0,T]\), and \(G,B\) are analytic on a neighborhood of its graph.
+Any analytic solution germ at \((t_0,0)\) with value \(Y_0(t_0)\)
+extends uniquely to a neighborhood of the whole segment
+\(\{(t,0):t_0\le t\le T\}\).
+The neighborhood may narrow in \(\xi\) as \(t\) increases.
+
+**Proof.** At a continuation point \(t_*\), rescale
+\(\xi=\rho z\). Equation (34) becomes
+\[
+ Y_t=G(t,\rho z,Y)+zB(t,\rho z,Y)Y_z.
+\]
+No inverse power of \(\rho\) occurs.
+By shrinking \(\rho>0\), the analytic Cauchy data
+\(Y(t_*,\rho z)\) on a fixed complex disc, say \(|z|<2\), can be
+made uniformly close to \(Y_0(t_*)\). This follows from their
+analyticity and their value at \(z=0\).
+
+Subtract \(Y_0(t)\), then choose common complex neighborhoods and
+coefficient bounds along the compact background graph, shrinking them
+if necessary.
+The analytic Cauchy--Kowalevski majorant construction now gives a
+positive time radius \(\delta\), independent of \(t_*\) and of the
+sufficiently small \(\rho\).
+More explicitly, Cauchy estimates on the fixed polydiscs give a
+common coefficient majorant for the rescaled right-hand sides and
+the Cauchy data. Subtracting the latter also gives a common majorant
+for their first \(z\)-derivatives on a smaller disc.
+The same scalar analytic Cauchy problem therefore majorizes every
+one of these initial-value problems.
+Thus its positive existence radius works for all of them.
+
+At \(z=0\) the solution remains \(Y_0(t)\) by ODE uniqueness.
+Restarting inside the resulting time interval, rescaling the spatial
+disc again if needed, advances by a fixed positive fraction of
+\(\delta\). Finitely many steps cover \([t_0,T]\).
+Analytic Cauchy uniqueness identifies the overlapping germs.
+Only a finite number of positive spatial-radius reductions is
+required. \(\square\)
+
+### Proposition 7.8 (nonlinear extension to every fixed finite width at the end)
+
+For every finite \(T>0\), the solution in Proposition 7.5 admits an
+analytic continuation with strictly positive curvature operator on
+\[
+ s\ge s_T,\qquad 0\le t\le T
+ \tag{35}
+\]
+for some finite \(s_T\). These continuations agree on overlaps.
+On each such finite-width region, its metric coefficients converge in
+all derivatives to the product in (29), and \(F-3s\) converges to (30).
+
+The quantifiers are essential: \(s_T\) may tend to infinity with \(T\).
+This does not give all \(t\ge0\) at a fixed \(s\), a second smooth
+singular orbit, or a complete ambient manifold.
+
+**Proof.** For \(t>0\), introduce
+\[
+ u=(\log H,\log a,\log b,F-3s),\quad
+ p=\partial_tu,\quad W=\xi\partial_\xi u,\qquad \xi=e^{-2s}.
+\]
+To make the noncharacteristic reduction explicit, write
+\(u=(h,\alpha,\beta,f)\) and set
+\[
+ \mathcal T=h_t+\alpha_t+\beta_t+f_t,\qquad
+ \Omega=\alpha_s+\beta_s-h_s+3+f_s.
+\]
+The four normalized diagonal equations are exactly
+\[
+\begin{split}
+ h_{tt}&=-h_t\mathcal T-e^{-2h}\big[
+ \alpha_{ss}+\beta_{ss}+f_{ss}+\alpha_s^2+\beta_s^2
+       -h_s(\alpha_s+\beta_s+3+f_s)\big],\\
+ \alpha_{tt}&=-\alpha_t\mathcal T
+       -e^{-2h}(\alpha_{ss}+\alpha_s\Omega),\\
+ \beta_{tt}&=-\beta_t\mathcal T
+       -e^{-2h}(\beta_{ss}+\beta_s\Omega),\\
+ f_{tt}&=-h_{tt}-\alpha_{tt}-\beta_{tt}
+                  -h_t^2-\alpha_t^2-\beta_t^2.
+\end{split}
+\]
+Here \(u_s=-2W\) and \(u_{ss}=4\xi\partial_\xi W\).
+Adjoining \(u_t=p\) and \(W_t=\xi\partial_\xi p\) therefore gives
+exactly a system of the form (34) for \(Y=(u,p,W)\), with analytic
+coefficients. The logarithms are valid where \(H,a,b\) are nonzero.
+At \(\xi=0\) the known background is the product cigar, for which
+\(H=a=1\) and \(b=B(t)>0\) on every compact interval in \(t>0\).
+Lemma 7.7 continues the solution from the tube to every such interval.
+The relation \(W=\xi u_\xi\) persists since its difference has zero
+\(t\)-derivative and vanishing initial data.
+The mixed soliton residual vanishes by analytic continuation from
+the overlapping initial tube. Thus this is a continuation of the
+full nonlinear soliton, not merely of its linearization.
+
+It remains to prove curvature positivity: convergence to the
+semipositive product alone would not suffice.
+Write the first-order coefficients as
+\[
+ \log H=\xi h+O(\xi^2),\quad
+ \log a=-\xi y+O(\xi^2),\quad
+ \log(b/B)=-\xi v+O(\xi^2),
+\]
+and set \(z=-h'\), \(L=B'/B\), \(D=L+\overline F'\), where
+\(\overline F=2\log\cosh(t/A)\). Then \(D'=-L^2\).
+The first-order equations imply
+\[
+ z''+Dz'=L^2z+4Lv,\qquad
+ v''+Dv'=(L^2+2)v+\tfrac12Lz,
+ \tag{36}
+\]
+with
+\[
+ z=2t+O(t^3),\qquad v=t^2/3+O(t^4).
+\]
+
+For clarity, (36) follows without dropping the mixed constraint.
+Write \(\alpha=-y\), \(\beta=-v\), let \(\eta\) be the coefficient
+of \(\xi\) in \(F-3s-\overline F\), and set
+\(Q=h+\alpha+\beta+\eta\).
+The linearized \(ss,tt,st,\psi\psi\) equations respectively give
+\[
+\begin{split}
+ h''+Dh'+2h+4Q&=0,\\
+ Q''+2L\beta'&=0,\\
+ 2Q'+h'+2L\beta&=0,\\
+ \beta''+D\beta'+LQ'-2\beta&=0.
+\end{split}
+\]
+Differentiating the first equation and substituting the third gives
+the equation for \(z\); substituting the third into the fourth gives
+the equation for \(v\).
+
+Both \(L,D\) are positive on \(t>0\).
+The positive integrating factor
+\(\mu=\exp(\int D\,dt)\) makes (36) a cooperative system:
+as long as \(z,v>0\), both \((\mu z')'\) and \((\mu v')'\) are positive.
+The displayed initial expansions show \(z,z',v,v'>0\) for small
+positive \(t\), so a first loss of any of these signs is impossible.
+Linear ODE continuation gives these inequalities for every finite
+\(t>0\).
+
+In the five-dimensional kernel of the limiting product curvature
+operator, the first-order coefficient is block diagonal.
+Its \(2\times2\) block is (33), and its remaining three entries are
+\[
+ z'\quad\hbox{on }e_s\wedge e_t,\qquad
+ 4v+Lz\quad\hbox{on }e_s\wedge e_\psi,\qquad
+ Ly'\quad\hbox{on }e_\phi\wedge e_\psi.
+ \tag{37}
+\]
+These follow directly from the multiply warped curvature formulas.
+All are positive for \(t>0\); their limits at zero are \(2,2,2\).
+Lemma 7.6 proves positivity of the \(2\times2\) block.
+The normal cigar two-plane has curvature
+\(c\,\operatorname{sech}^2(t/A)>0\).
+Consequently, on every fixed compact interval \(0\le t\le T\),
+both this normal curvature and the least eigenvalue of the
+first-order kernel block have positive lower bounds.
+
+The analytic continuation supplies uniform Taylor remainders in
+\(\xi\) on that interval. The same Schur-complement argument as in
+Proposition 7.5 proves strictly positive curvature operator for all
+sufficiently small \(\xi>0\), uniformly for \(0\le t\le T\).
+Taking \(s_T\) large enough gives (35).
+Analyticity also supplies convergence with all derivatives, and
+uniqueness makes the continuations compatible. \(\square\)
+
+Thus no obstruction occurs at a prescribed finite normal distance
+when the starting point is allowed to move sufficiently far out
+along the fixed surface. The unresolved region is the joint regime
+in which normal distance and the axis parameter both become large,
+together with the global orbit matching and completeness conditions.
+The argument gives no bound on \(s_T\) that resolves that regime.
 
 The local construction is not a counterexample to the complete-soliton
 conjecture. It proves that strict ambient curvature, the exact soliton

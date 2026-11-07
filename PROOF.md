@@ -715,10 +715,142 @@ of the curvature operator persists on some open neighborhood of the
 entire axis by continuity, with neighborhood width allowed to vary.
 \(\square\)
 
-This is an obstruction to an **axis-only proof**, not a counterexample to
-the soliton conjecture. The transverse steady PDE, its compatibility to
-higher order, and global completeness contain information not present in
-(20)--(23). A totally geodesic three-dimensional fixed submanifold also
+### Proposition 7.2 (formal compatibility to every transverse order)
+
+For each \(0<\theta<1\), the axis data in Proposition 7.1 extend
+uniquely in the normal-distance gauge to formal series
+\[
+\begin{aligned}
+ H&=1+\sum_{j\ge1}h_{2j}(s)t^{2j},&
+ a&=w(s)\left(1+\sum_{j\ge1}a_{2j}(s)t^{2j}\right),\\
+ b&=t\left(1+\sum_{j\ge1}b_{2j}(s)t^{2j}\right),&
+ F&=F_0(s)+\sum_{j\ge1}f_{2j}(s)t^{2j},
+\end{aligned}
+\]
+such that
+\[
+ g=dt^2+H^2ds^2+a^2d\phi^2+b^2d\psi^2,
+ \qquad \operatorname{Ric}_g-\nabla^2F=0
+\]
+as a formal series. The initial coefficients are
+\[
+ h_2=a_2=-U/2,\qquad b_2=-N/6,\qquad f_2=(2U+N)/2.
+\]
+All coefficients are smooth along the complete fixed surface, including
+its vertex. For every finite prescribed order, a sufficiently long
+truncation gives a smooth metric with positive curvature operator on
+some neighborhood of that surface and with soliton residual vanishing
+to that order in the normal distance.
+
+This is a statement about formal series and finite truncations.
+**Convergence, an exact soliton on an open set, and a complete ambient
+soliton are not asserted.**
+
+**Proof.** Write \(E=\operatorname{Ric}-\nabla^2F\).
+First work at \(s>0\). Reflections in \(\phi,\psi\) leave only the four
+diagonal components and \(E_{st}\) potentially nonzero. The diagonal
+components \(E_{ss}/H^2,E_{\phi\phi}/a^2,E_{\psi\psi}/b^2,E_{tt}\)
+are even formal series, whereas \(E_{st}\) is odd.
+
+Suppose all coefficients below an even order \(n\ge4\) have been
+constructed. Add
+\[
+ \delta H=h_nt^n,\quad \delta a=w a_nt^n,\quad
+ \delta b=b_nt^{n+1},\quad \delta F=f_nt^n.
+\]
+At order \(t^{n-2}\), the contributions of these new coefficients to the
+four normalized diagonal components are
+\[
+\begin{array}{c|l}
+ ss/H^2 &-n^2h_n\\
+ \phi\phi/a^2&-n^2a_n\\
+ tt&-n(n-1)(h_n+a_n+f_n)-n(n+1)b_n\\
+ \psi\psi/b^2&-n(h_n+a_n+f_n)-n(n+1)b_n .
+\end{array}
+\tag{24}
+\]
+All other terms at that order depend only on earlier coefficients and
+their \(s\)-derivatives. To see (24), the second \(t\)-derivatives
+contribute \(n(n-1)\) for \(H,a,F\) and \(n(n+1)\) for \(b/t\).
+The leading \(b_t/b=1/t+O(t)\) contributes the additional \(n\) in
+the first two rows and the terms in the last row. Derivatives solely
+in \(s\) cannot lower the new power of \(t\).
+
+The first two rows determine \(h_n,a_n\). The last two then determine
+\(b_n,f_n\): their coefficient matrix has determinant of absolute
+value \(n^2(n+1)(n-2)>0\). Thus all diagonal equations have a unique
+formal solution extending the specified order-two data.
+
+It remains to prove the mixed equation, not merely the diagonal ones.
+Set \(C=R+|\nabla F|^2\). The contracted Bianchi identity gives
+\[
+ \operatorname{div}E-d(\operatorname{tr}E)+E(\nabla F,\cdot)
+       =-\tfrac12dC.
+ \tag{25}
+\]
+For the formal diagonal solution, only \(e=E_{st}\) remains, so
+\[
+ C_s=-2(e_t+A e),\qquad
+ C_t=-2H^{-2}(e_s+B e),
+ \tag{26}
+\]
+where
+\[
+ A=\frac{H_t}{H}+\frac{a_t}{a}+\frac{b_t}{b}+F_t
+       =t^{-1}+O(t),\qquad
+ B=-\frac{H_s}{H}+\frac{a_s}{a}+\frac{b_s}{b}+F_s=O(1).
+\]
+Here both order estimates are as \(t\to0\) for fixed \(s>0\).
+These identities follow by taking the divergence of the tensor whose
+only nonzero entries are \(E_{st}=E_{ts}=e\).
+The value of \(C\) on \(t=0\) is the constant \(8+4/\theta\) from
+Proposition 7.1; higher coefficients do not change it.
+Consequently (26) forces the coefficient of \(t\) in \(e\) to vanish.
+
+If \(e_k(s)t^k\), with odd \(k\ge3\), were its first nonzero term,
+commuting the two derivatives of \(C\) in (26) would give
+\[
+ \partial_t(e_t+A e)
+       =\partial_s\!\left[H^{-2}(e_s+B e)\right].
+\]
+The left side has coefficient \((k+1)(k-1)e_k\) at order \(t^{k-2}\);
+the right side starts at order \(t^k\). Thus \(e_k=0\), a
+contradiction. All mixed coefficients vanish. This proves the full
+formal equation, not just its diagonal restriction.
+
+For smoothness at \(s=0\), induct on the truncation order. Initially the
+coefficients are even smooth functions of \(s\), with \(h_2(0)=a_2(0)\).
+A smooth rotational metric in the first plane has \(H\) and \(a/s\)
+even and \(H(0,t)=(a/s)(0,t)\): their squared difference is divisible
+by \(s^2\), which is exactly the Cartesian smoothness condition.
+Assume it holds for the previous truncation. Its residual \(E\) is a
+smooth invariant tensor. Hence its normalized radial and angular
+tangential entries are smooth even functions and agree at \(s=0\).
+Their next coefficient sources therefore agree there. The identical
+first two coefficients \(-n^2\) in (24) enforce
+\(h_n(0)=a_n(0)\), while preserving even smoothness. The normal diagonal
+sources are also smooth even functions of \(s\), so the remaining
+linear system preserves that property for \(b_n,f_n\).
+This establishes the induction. Evenness in \(t\), together with
+\(b/t=1+O(t^2)\), gives smoothness in the second Cartesian plane as well.
+
+Finally, any finite truncation is smooth and retains exactly the
+axis curvature operator of Proposition 7.1. Its strict positivity
+persists on an open neighborhood, whose width may depend on \(s\)
+and on the truncation order. Since the formal residual is zero,
+taking enough coefficients makes each finite truncation satisfy the
+equation to any specified finite transverse order. \(\square\)
+
+The strict curvature-gap problem therefore cannot be resolved by
+finding an inconsistent finite transverse soliton jet in this
+particular collapsed axis construction. The remaining distinction is
+between these formally compatible jets and a convergent, globally
+complete soliton. No uniform neighborhood width, curvature lower bound
+at infinity, or convergence estimate follows from the recurrence.
+
+These are obstructions to **finite-jet arguments**, not counterexamples
+to the soliton conjecture. Convergence and global completeness are not
+settled by formal compatibility. A totally geodesic three-dimensional fixed submanifold also
 does not automatically inherit the steady equation: its intrinsic Ricci
 tensor omits normal-curvature contributions. Three-dimensional soliton
 classification cannot be applied to it on total geodesicity alone.

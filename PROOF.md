@@ -1017,6 +1017,135 @@ would require \(B\le1-2a\). For instance, the admissible choices
 The examples satisfying \(B\le1-2a\) remain unexcluded. No member
 of this diagnostic family has been identified with an LP axis.
 
+### Proposition 6.8 (global transverse Jacobi budget)
+
+Let the complete positively curved steady soliton carry the standard
+\(O(2)\times O(2)\) action, meaning an action equivariantly
+diffeomorphic to the linear action on
+\(\mathbb R^2\oplus\mathbb R^2\). Let \(F\) be its invariant
+potential. From \(p\in\Sigma_p\setminus\{o\}\), launch any unit
+geodesic \(\gamma\) normal to \(\Sigma_p\), and set
+\(w=\mathcal A(p)>0\). Then \(\gamma\) first meets \(\Sigma_q\)
+at a finite time \(T>w\), away from \(o\). Writing
+\[
+ a(t)=\mathcal A(\gamma(t)),\qquad
+ \kappa(t)=\sec(\gamma'(t),K_\phi(t)/a(t)),\quad 0\le t<T,
+\]
+where \(K_\phi\) is the period-\(2\pi\) first-circle generator,
+there is a number \(0<\nu<1\) such that
+\[
+ \int_0^T\kappa(t)a(t)\,dt=\nu,\qquad
+ \int_0^L\kappa(t)\,dt<\frac1{w-L}\quad(0<L<w).
+\]
+In particular,
+\[
+ \int_0^{w/2}\kappa(t)\,dt<\frac2w.
+\]
+No global gradient bound for \(\mathcal A\), injectivity of the
+normal exponential map, or curvature-scale compactness is needed.
+
+**Proof.** Choose a reflection in each factor fixing the initial
+point and the selected initial tangent vector. Their common fixed
+surface is a smooth totally geodesic meridional plane.
+Geodesic uniqueness keeps \(\gamma\) in that plane.
+On the principal part, the reflections eliminate angular cross
+terms and the metric is
+\(h+\mathcal A^2d\phi^2+\mathcal B^2d\psi^2\).
+Along a meridional geodesic the unit angular field
+\(K_\phi/\mathcal A\) is parallel. The Killing Jacobi equation
+therefore gives the scalar equation
+\[
+ a''=-\kappa a.
+\]
+The reflection fixing \(\Sigma_p\) pointwise reverses the initial
+normal direction and preserves \(\mathcal A\); thus
+\(a(0)=w\) and \(a'(0)=0\).
+
+The standard linear action has no exceptional orbit strata:
+the nonprincipal set consists exactly of the two coordinate
+fixed planes. Before encountering \(\Sigma_q\), the field
+\(K_\phi\) is nonzero. Both \(a\) and the scalar Jacobi equation
+extend smoothly across any intermediate crossings of \(\Sigma_p\).
+Such a crossing cannot be tangent, by total geodesicity and
+uniqueness. Focal points of the initial normal family do not affect
+this equation for the individual geodesic and its Killing field.
+
+Since \(\kappa>0\), the derivative \(a'\) strictly decreases
+as long as \(a>0\). If no zero occurred, fixing any \(t_0>0\)
+would give
+\[
+ a(t)\le a(t_0)+(t-t_0)a'(t_0),\qquad t\ge t_0,
+\]
+with \(a'(t_0)<0\), a contradiction for sufficiently large \(t\).
+Completeness prevents finite-time escape. Thus there is a finite
+first zero \(T\), whose endpoint lies in \(\Sigma_q\).
+
+Let \(\nu\) be the magnitude of the component of \(\gamma'(T)\)
+normal to \(\Sigma_q\). Smoothness of the standard polar action,
+with unit rotation weight and period \(2\pi\), gives
+\(a'(T-)=-\nu\), \(0\le\nu\le1\).
+If \(\nu=0\), geodesic uniqueness at this totally geodesic
+fixed plane would force \(\gamma\) to have lain in it, which is
+impossible. Hence \(\nu>0\).
+
+Invariance makes \(\nabla F\) tangent to both fixed planes.
+Consequently
+\[
+ (F\circ\gamma)'(0)=0,\qquad
+ (F\circ\gamma)'(T)
+   =\int_0^T\operatorname{Ric}(\gamma',\gamma')\,dt>0.
+\]
+If \(\nu=1\), the terminal tangent would be normal to
+\(\Sigma_q\), forcing the latter derivative to vanish.
+This proves \(\nu<1\). The same argument excludes a hit at
+the common vertex, where the invariant potential has zero
+gradient. An invariant potential can also be obtained by
+averaging over the compact group: its Hessian remains Ricci,
+and positive Ricci curvature rules out a nonzero parallel
+difference of potential gradients.
+
+Integration of the Jacobi equation, with the smooth terminal
+slope just established, gives
+\(\int_0^T\kappa a=\nu\).
+Strict decrease of \(a'\) from zero to \(-\nu\) also gives
+\[
+ a(t)>w-\nu t\ge w-t\quad(0<t<T),\qquad
+ w=\int_0^T(-a')\,dt<\nu T<T.
+\]
+Thus \(T>w\). For \(0<L<w\), integration on \([0,L]\) yields
+\[
+ (w-L)\int_0^L\kappa\,dt
+ \le\int_0^L\kappa a\,dt<\nu<1,
+\]
+as required. \(\square\)
+
+This first collision need not minimize distance between the
+fixed planes; in fact its tangent is not normal to the second
+plane. The conclusion does not provide global normal coordinates
+or solve the second-axis soliton matching problem.
+
+**Conditional consequence.** Suppose an actual axis satisfies
+\(w(s)\sim w_0s^\mu\). If fixed constants \(\delta,k_0>0\) give
+the additional transverse estimate
+\[
+ \kappa_s(t)\ge k_0/s
+ \quad\text{for }0\le t\le\delta\sqrt{s}
+\]
+for all sufficiently large \(s\), then \(\mu\le1/2\).
+Indeed, if \(\mu>1/2\), that whole interval is contained in
+\([0,w(s)/2]\), and
+\[
+ \frac{k_0\delta}{\sqrt{s}}
+ \le\int_0^{\delta\sqrt{s}}\kappa_s(t)\,dt
+ <\frac2{w(s)},
+\]
+which is impossible as \(s\to\infty\).
+The displayed transverse lower bound has **not** been proved
+for the LP family. An asymptotic value of \(\kappa_s(0)\)
+on the axis alone does not imply it. The proposition supplies
+a global integral constraint on an expanding transverse interval,
+not a resolution of the zero-limit case or the strict gap.
+
 ## 7. The remaining analytic obstacle
 
 For \(p=q=2\), the original boundary question is now the precise strict

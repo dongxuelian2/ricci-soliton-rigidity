@@ -29,6 +29,14 @@ Research on complete steady gradient Ricci solitons with the standard
   logarithmic-time transverse development and excludes part of the
   diagnostic axis family. Neither the expansion hypothesis nor this
   remaining nonempty interval resolves the LP strict gap.
+* **Global transverse curvature budget:** every normal geodesic from
+  one fixed axis meets the other axis in finite time, with nonorthogonal
+  terminal tangent. The first-circle Jacobi equation gives
+  \(\int_0^T K a\,dt<1\) and
+  \(\int_0^{w/2}K\,dt<2/w\), without curvature-scale compactness or
+  a globally injective normal gauge. A separate, still unproved
+  transverse lower bound would restrict power-law exponents to
+  \(\mu\le1/2\); the axis curvature value alone does not supply it.
 * **Exact symmetry in all factor dimensions:** distinct pure sectional
   curvatures at the tip determine the full isometry group through the
   curvature operator, even when the Ricci eigenvalues coincide. Thus

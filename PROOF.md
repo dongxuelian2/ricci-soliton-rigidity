@@ -1321,7 +1321,160 @@ when the starting point is allowed to move sufficiently far out
 along the fixed surface. The unresolved region is the joint regime
 in which normal distance and the axis parameter both become large,
 together with the global orbit matching and completeness conditions.
-The argument gives no bound on \(s_T\) that resolves that regime.
+This compact-time argument gives no growth rate for \(s_T\);
+Proposition 7.9 uses the uniform product background to obtain a linear
+bound.
+
+### Proposition 7.9 (linear control of the continuation threshold)
+
+For each fixed \(0<\theta<1\), there are constants \(s_*>0\) and
+\(C_*>0\) such that the same analytic soliton extends with strictly
+positive curvature operator throughout
+\[
+ s\ge s_*+C_*t,\qquad t\ge0.
+ \tag{38}
+\]
+In particular the thresholds in Proposition 7.8 can be chosen with
+\(s_T\le s_*+C_*T\) for every \(T\ge0\).
+
+This gives a joint large-\(s,t\) region, not a complete ambient
+manifold. At each fixed \(s\), (38) still allows only a finite normal
+interval. It supplies no smooth matching to the second singular orbit.
+
+**Proof.** Fix \(t_0>0\) inside the original uniform tube.
+For \(t\ge t_0\), subtract the product solution \(Y_0(t)\) from the
+first-order system used in Proposition 7.8 and write
+\(Z=Y-Y_0\). It has the form
+\[
+ Z_t=\mathcal G(t,Z)+\xi\mathcal B(t,Z)Z_\xi,\qquad
+ \mathcal G(t,0)=0.
+ \tag{39}
+\]
+The coefficients are uniformly holomorphic and bounded on a fixed
+complex time neighborhood of the entire half-line \(t\ge t_0\),
+and for \(Z\) in a fixed small polydisc.
+Indeed \(B(t)=A\tanh(t/A)\), \(B'/B\), and all required derivatives
+are uniformly holomorphic away from \(t=0\) in a sufficiently narrow
+strip. The logarithm of \(B\) is bounded there.
+The unbounded value of the cigar potential causes no problem:
+the displayed logarithmic equations depend only on its derivatives,
+which are uniformly bounded. This also shows directly that subtracting
+the product trajectory gives the stated uniform bounds in (39).
+
+Here is a quantitative version of the restarting argument.
+Choose a small allowed data size \(\eta>0\).
+The common analytic Cauchy majorant supplies constants \(\delta>0\)
+and \(M>0\) with this property: a perturbation bounded by \(\eta\)
+on a fixed complex spatial disc gives a solution bounded by \(M\)
+on a fixed smaller disc for a complex time interval of radius
+\(\delta\). These constants work at every real \(t\ge t_0\).
+Rescaling \(\xi=r z\) does not change them, because
+\(\xi\partial_\xi=z\partial_z\).
+
+All these solutions satisfy \(Z(t,0)=0\).
+At a restart time inside the preceding time disc, the Schwarz bound
+on the smaller spatial disc gives
+\[
+ |Z(t,\lambda r z)|\le C M\lambda
+\]
+on the next normalized data disc, where \(C\) is an absolute
+disc-radius constant.
+Choose a fixed \(0<\lambda<1\), smaller than the fixed Cauchy output-disc
+fraction, such that \(CM\lambda\le\eta\).
+Thus each restart can use exactly the fixed spatial reduction
+\(r\mapsto\lambda r\), while advancing by the fixed time
+step \(\delta/2\).
+Induction gives a single compatible analytic continuation for all
+\(t\ge t_0\). Let \(r(t)\) be the decreasing restart radius after a
+fixed margin reduction. It satisfies
+\[
+ r(t)\ge r_*e^{-a t}
+ \tag{40}
+\]
+for constants \(r_*,a>0\).
+The bound on \(Z\) remains uniform; shrink the initial radius so that
+\(r(t)\le1\).
+Keeping fixed spatial and temporal margins inside each Cauchy
+neighborhood, Cauchy estimates also bound its required time
+derivatives and Euler derivatives \(\xi\partial_\xi\) uniformly.
+
+Consequently the curvature matrix in the adapted orthonormal frame
+is uniformly holomorphic and bounded for
+\(|\xi|<c_0 r(t)\), after changing fixed constants.
+The product cigar radius is bounded away from zero for \(t\ge t_0\);
+the logarithmic variables keep the other metric factors bounded
+away from zero on these small complex neighborhoods.
+Taylor estimates therefore give, in the five-plus-one decomposition
+used above,
+\[
+ \mathcal R(\xi,t)=
+ \begin{pmatrix}
+  \xi P(t)+O(\xi^2/r(t)^2)&O(\xi/r(t))\\
+  O(\xi/r(t))&k_0(t)+O(\xi/r(t))
+ \end{pmatrix},
+ \qquad k_0(t)=c\,\operatorname{sech}^2(t/A),
+ \tag{41}
+\]
+with uniform constants for sufficiently small \(\xi/r(t)\).
+
+We need quantitative lower bounds for \(P(t)\), not merely its
+pointwise positivity.
+Set \(q=y'/y\). Lemma 7.6 gives \(0<q\le\kappa\), \(q'>0\), and
+\(q'\le2\). Differentiating its Riccati equation gives
+\[
+ (q')'+(D+2q)q'=L^2q\ge0.
+\]
+Since \(D(t)\le D(t_0)\), it follows that
+\(q'(t)\ge c_1e^{-K_1t}\) for positive constants.
+The least eigenvalue of its \(2\times2\) curvature block is bounded
+below by its determinant divided by its trace, namely
+\[
+ \frac{4yq'}{4+q'+q^2}\ge c_2e^{-K_1t}.
+\]
+We used \(y\ge2\) and the bounds on \(q,q'\).
+
+Equation (36) also gives
+\[
+ z'(t)\ge c_3e^{-D(t_0)t},\qquad
+ 4v+Lz\ge4v(t_0)>0.
+\]
+Finally \(y''>0\), so \(y'(t)\ge y'(t_0)>0\), while
+\(L=(2/A)\operatorname{csch}(2t/A)\ge(4/A)e^{-2t/A}\).
+Thus \(Ly'\) and \(k_0\) have exponential positive lower bounds.
+Combining these estimates, for some \(m,K>0\),
+\[
+ P(t)\ge m e^{-Kt}I,\qquad k_0(t)\ge m e^{-Kt}
+ \quad(t\ge t_0).
+ \tag{42}
+\]
+
+First make the last block in (41) at least
+\(\tfrac12 m e^{-Kt}\).
+Its Schur correction to the kernel block is then bounded above by
+\(C\xi^2r(t)^{-2}e^{Kt}\).
+Together with the kernel Taylor remainder, (42) shows that all
+blocks are strictly positive whenever
+\[
+ 0<\xi\le d\,r(t)^2e^{-2Kt}
+ \tag{43}
+\]
+for a sufficiently small fixed \(d>0\).
+Shrinking \(d\) also ensures the analytic-radius and last-block
+conditions. By (40), it suffices to require
+\[
+ 0<\xi\le d_*e^{-(2a+2K)t}.
+\]
+Since \(\xi=e^{-2s}\), this is a linear condition
+\(s\ge s_*+(a+K)t\).
+Increasing \(s_*\) handles the compact normal interval
+\(0\le t\le t_0\) using Proposition 7.5.
+All continuations agree by analytic uniqueness, so (38) describes
+one exact nonlinear solution. \(\square\)
+
+The uncontrolled part is now the complementary joint regime and
+the second singular-orbit boundary, not growth of \(s_T\) faster
+than every linear function. The constants in (38) are not claimed
+sharp, and (38) does not imply a complete extension.
 
 The local construction is not a counterexample to the complete-soliton
 conjecture. It proves that strict ambient curvature, the exact soliton

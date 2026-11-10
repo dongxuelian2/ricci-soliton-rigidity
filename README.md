@@ -15,20 +15,28 @@ Research on complete steady gradient Ricci solitons with the standard
   its angular--normal curvature is integrable. An unbounded sublinear
   radius requires nonsummable angular--normal curvature but summable
   radial--normal curvature. Explicit analytic axis data satisfy all these
-  tests and every tip ratio, without being asserted to come from a complete
-  soliton. The missing bridge from general collapsed axes to the special
-  cigar profile is therefore kept explicit.
-* **Actual ambient limits and a conditional global restriction:** every
+  tests and every tip ratio. Proposition 6.7 now excludes complete
+  positive-curvature extensions of that entire diagnostic family by an
+  ambient sectional-curvature sign obstruction, including the previously
+  unexcluded parameter range. Thus those axis tests remain insufficient,
+  but that family supplies no candidate for complete soliton existence.
+* **Actual ambient limits and exclusion of analytic sublinear power laws:** every
   unbounded actual axis, including a sublinear one, has unrescaled
   pointed limits equal to a plane times a cigar, or flat four-space.
   These are actual products, with quotient possibilities excluded.
-  If its positive limiting normal curvature and analytic power-law
-  expansion \(w\sim w_0s^\mu,\ F_0'=\ell-b/s+O(s^{-2})\) also hold,
-  completeness and positive curvature require
-  \(\mu(1-\mu)\le b\le\mu\). The upper bound uses a controlled
-  logarithmic-time transverse development and excludes part of the
-  diagnostic axis family. Neither the expansion hypothesis nor this
-  remaining nonempty interval resolves the LP strict gap.
+  If the limiting normal sectional curvature is positive, an analytic
+  power-law expansion
+  \(w=w_0s^\mu(1+\omega/s+O(s^{-2}))\),
+  \(F_0'=\ell-b/s+g/s^2+O(s^{-3})\) with \(0<\mu<1\)
+  is impossible. Two sectional-curvature tests first force exact
+  equalities for \(b,g\). An exact adjoint integral evaluates the second
+  transverse coefficient. The remaining meridional curvature is then
+  strictly negative at order \(s^{-4}\), independently of all higher
+  axis coefficients. A fourth-order development with a uniform error
+  on \(t=\gamma\log s\) justifies the sign for the actual soliton.
+  This replaces the former interval restriction by exclusion of the
+  entire analytic power-law sublinear regime. The LP expansion
+  hypothesis remains unproved.
 * **Global transverse curvature budget:** every normal geodesic from
   one fixed axis meets the other axis in finite time, with nonorthogonal
   terminal tangent. The first-circle Jacobi equation gives
@@ -107,5 +115,15 @@ The main target remains proving the strict total-curvature bound, hence
 **boundary-orbit noncollapse**, not ambient
 \(\kappa\)-noncollapse. The closed-disk conclusion and the paper's enhanced
 dimension reduction remain conditional on that hypothesis.
+
+Proposition 6.7 eliminates every analytic sublinear power-law axis
+with positive limiting normal curvature, not only the explicit
+diagnostic family. To turn that exclusion into a strict gap for LP,
+one must control the actual axis data and their normal development
+on distances growing with the axis parameter, without assuming an
+analytic expansion at infinity.
+The fixed-radius product limit alone supplies neither that expansion
+nor such uniform control. The branch with zero limiting normal
+curvature also remains separate.
 
 These notes make no priority claim and are not a submission manuscript.

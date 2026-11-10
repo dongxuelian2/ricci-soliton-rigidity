@@ -836,24 +836,30 @@ In particular it does not exclude \(w(s)/s\to0\).
 When \(c=0\), it says nothing about limits after rescaling by a
 curvature scale that tends to infinity.
 
-### Proposition 6.7 (a conditional restriction on power-law axes)
+### Proposition 6.7 (exclusion of analytic sublinear power-law axes)
 
-Suppose, in addition, that an actual complete axis has \(c>0\) and
+An actual complete axis under the hypotheses of Proposition 6.4
+cannot simultaneously have \(c>0\) and the expansion
 \[
  w(s)=w_0s^\mu W(1/s),\qquad
  F_0'(s)=\ell-\frac b s+\frac1{s^2}G(1/s),
  \qquad 0<\mu<1,
 \]
 where \(w_0>0\), and \(W,G\) are real analytic near zero with
-\(W(0)=1\). Then necessarily
+\(W(0)=1\). The obstruction is a negative sectional curvature
+at normal distances \(t=\gamma\log s\), for a fixed sufficiently
+large \(\gamma\). The proof first forces two exact coefficient
+equalities, then shows that the meridional sectional curvature is
 \[
- \mu(1-\mu)\le b\le\mu.
+ -\frac{\mu^2(1-\mu^2)(d^2+\ell^2)}{d^4}s^{-4}
+       +o(s^{-4})<0,\qquad d=\sqrt{2c}.
 \]
-The upper bound uses positive curvature of the ambient soliton,
-not just the axis equations. This analytic power-law hypothesis
-has not been proved for the LP family.
+This excludes the whole analytic power-law sublinear regime with a
+nonflat transverse limit. It does not assert that every sublinear
+axis has such an expansion, or resolve the branch \(c=0\).
 
-**Proof.** Write \(\varepsilon=1/s\), \(d=\sqrt{2c}>0\), and
+**Proof.** Write \(\varepsilon=1/s\), \(d=\sqrt{2c}>0\),
+\(\omega=W'(0)\), \(g=G(0)\), and
 \(N_1=\ell(b-\mu)\). The axis identities give
 \[
  k=\mu(1-\mu)\varepsilon^2+O(\varepsilon^3),\quad
@@ -999,23 +1005,332 @@ the negative of this quantity, is negative.
 The estimates keep the normal development regular along the
 whole segment; a complete soliton agrees with it by analytic
 uniqueness. This contradicts positive sectional curvature and
-proves \(b\le\mu\). \(\square\)
+proves \(b\le\mu\).
 
-The interval in Proposition 6.7 is not empty. Neither its analytic
-expansion hypothesis nor \(c>0\) follows from the present results.
-Consequently it narrows a conditional sublinear regime without
-settling the strict boundary-orbit gap.
+There is a second sectional-curvature test at the same points.
+Let \(h=\log H\), \(v=\log b_{\rm orb}\), and
+\(e_s=H^{-1}\partial_s\). The full connection formula is
+\[
+ K(e_s,e_\psi)=-H^{-2}
+ \left(v_{ss}+v_s^2-h_s v_s+H^2h_t v_t\right).
+\]
+At fixed \(t\) the physical spatial derivative is
+\(-\varepsilon^2\partial_\varepsilon\); it is taken before
+evaluating at \(t=\gamma\log s\). The expansion gives
+\[
+ v_{ss}=-\frac{2N_1}{d^2}\varepsilon^3
+              +O(\varepsilon^4P(t))+o(\varepsilon^3),\quad
+ h_s=O(\varepsilon^3P(t)),\quad h_t=O(\varepsilon^2P(t)),
+\]
+and \(v_s=O(\varepsilon^2P(t))\),
+\(v_t=O(\varepsilon^2P(t))+O((1+t)e^{-dt})\).
+Here and below \(P\) denotes a fixed polynomial, whose value can
+increase from line to line. Two Cauchy estimates on a smaller
+complex \(z\)-disc make the twice-spatially-differentiated remainder
+\(O(\varepsilon_0^5P(T))\); differentiating
+\(-\varepsilon_0z^2\partial_z\) also has precisely this order.
+Thus the connection terms above cannot contribute at order
+\(\varepsilon^3\), and
+\[
+ K(e_s,e_\psi)=\frac{2N_1}{d^2}s^{-3}+o(s^{-3}).
+\]
+Positive sectional curvature now requires \(N_1\ge0\).
+Together with the mixed-circle test this gives \(N_1=0\),
+equivalently \(b=\mu\).
 
-In Example 6.5, the expansion hypotheses hold with
-\(\mu=1-2a\), \(b=B\), \(W(\varepsilon)=(1+\varepsilon^2)^{-a}\),
-and \(\ell=B\pi/2\); its limiting normal curvature is positive.
-Thus any complete positive-curvature extension of those axis data
-would require \(B\le1-2a\). For instance, the admissible choices
-\(c_0=8,\ a=1/8,\ B=1\) are excluded when
-\(\theta<6/(6+\pi^2)\), where \(c_0\) denotes the constant called
-\(c\) in that example, not the limiting normal curvature here.
-The examples satisfying \(B\le1-2a\) remain unexcluded. No member
-of this diagnostic family has been identified with an LP axis.
+We next determine the second coefficient; this prevents the
+first equality from leaving an arbitrary normal-radius mode.
+The scalar identity on the axis gives
+\[
+ N=c+N_2\varepsilon^2+O(\varepsilon^3),\qquad
+ N_2=\ell(\omega-g)-\frac{\mu^2}{2}.
+\]
+Now \(\beta_1=0\), \(Q_1'=0\), and
+\[
+ \alpha_1'=-\frac{\ell\mu}{d}\tanh(dt/2).
+\]
+Consequently the second normal subsystem is exactly
+\[
+ \beta_2''+D\beta_2'+LQ_2'=0,\qquad
+ Q_2''=-2L\beta_2'-(\alpha_1')^2.
+\]
+Put \(x=dt\), \(P_0=\ell^2\mu^2/d^4\), and
+\(Y(x)=\sinh x\,\partial_x\beta_2\).
+The first equation gives \(Q_2'/d=-Y'\); substituting this
+into the second gives the scalar equation
+\[
+ Y''-2\operatorname{csch}^2x\,Y=P_0\tanh^2(x/2),\qquad
+ Y(x)=-\frac{N_2}{3d^2}x^2+O(x^4).
+\]
+The homogeneous functions \(\coth x\) and \(x\coth x-1\)
+have Wronskian one. Variation of parameters gives
+\[
+\begin{split}
+Y(x)={}&-\frac{N_2}{d^2}(x\coth x-1)\\
+&+P_0(x\coth x-1)\int_0^x\coth r\,\tanh^2(r/2)\,dr\\
+&-P_0\coth x\int_0^x(r\coth r-1)\tanh^2(r/2)\,dr.
+\end{split}
+\]
+All integrals are regular at zero. This representation proves
+\(Y=O((1+x)^2)\), \(Y'=O(1+x)\), and hence exponential,
+polynomially weighted decay of \(\beta_2'\) and \(\beta_2''\).
+In particular \(\beta_2\) has a finite limit \(E\).
+
+That limit can be evaluated exactly. For
+\(\mathcal D=\partial_x^2-2\operatorname{csch}^2x\),
+the function \(z=\operatorname{csch}x\) satisfies \(\mathcal Dz=z\).
+Twice integrating by parts yields
+\[
+\begin{split}
+E=\int_0^\infty Yz\,dx
+&=[Yz'-Y'z]_0^\infty+
+      P_0\int_0^\infty\operatorname{csch}x\tanh^2(x/2)\,dx\\
+&=-\frac{N_2}{d^2}+\frac{P_0}{2}.
+\end{split}
+\]
+The boundary term at infinity is zero by the polynomial growth
+of \(Y\), and at zero it is \(N_2/d^2\).
+The integral is \(1/2\), by the substitution \(r=x/2\):
+its integrand becomes \(\sinh r/\cosh^3r\).
+
+For \(\gamma>4/d\), the same full connection formula and the
+twice-spatially-differentiated second-order expansion give
+\[
+ K(e_s,e_\psi)=-6E s^{-4}+o(s^{-4}).
+\]
+Indeed \(v_{ss}=6\varepsilon^4\beta_2+O(\varepsilon^5P(t))\),
+\(h_s v_s=O(\varepsilon^6P(t))\), and
+\(h_t v_t=O(\varepsilon^5P(t))+O(\varepsilon^2P(t)e^{-dt})\).
+This already requires \(E\le0\).
+
+To get the reverse inequality, one more coefficient is needed
+in the normal time derivative. No uncontrolled differentiation of
+a pointwise error is used. In normalized variables the exact
+second-radius equation is
+\[
+ \beta_{tt}+D\beta_t+LQ_t
+ =-\beta_tQ_t-e^{-2h}(\beta_{ss}+\Omega\beta_s),
+\]
+where
+\[
+ \Omega=(\log w)'+F_0'+\alpha_s+\beta_s-h_s+f_s.
+\]
+Since \(b=\mu\), \(\beta_1=Q_1'=h_1=0\), and
+\(f_1=-\alpha_1\), its third-order equation and the normal trace
+equation are
+\[
+ \beta_3''+D\beta_3'+LQ_3'=2\ell\beta_2,\qquad
+ Q_3''=-2L\beta_3'-2\alpha_1'\alpha_2'.
+\]
+In particular there is no additional nondecaying third-order
+source from \(h_2\), \(Q_2\), or \(\alpha_2\) in the first equation:
+each multiplies \(\beta_1\), \(\beta_1'\), or a spatial derivative
+of order at least three. The latter terms affect order four or
+higher. The second equation gives \(Q_3'=O((1+t)^2)\), and
+variation of constants in the stable first equation gives
+\[
+ \beta_3'\longrightarrow\frac{2\ell E}{d}.
+\]
+These estimates follow jointly: the \((\beta_3',Q_3')\) homogeneous
+propagator is bounded, and the inhomogeneous terms have polynomial
+growth. The other two third-order coefficient equations have
+the scalar stable operator \(\partial_t^2+D\partial_t\), with
+polynomially bounded lower-order sources. Thus \(u_3\) and all
+required time derivatives have polynomial growth as well.
+
+The previous analytic majorant now applies with
+\[
+ u_{\rm app}=\varepsilon u_1+\varepsilon^2u_2+
+                  \varepsilon^3u_3,\qquad
+ Z_{\rm app}=-\varepsilon^2u_1-2\varepsilon^3u_2-
+                  3\varepsilon^4u_3.
+\]
+The \(Z_t=\partial_s p\) equation again cancels identically.
+All other residuals are \(O(\varepsilon_0^4P(T))\), so the
+same bounded-propagator estimate gives that error for \(u,u_t\)
+and one extra power for its spatial derivative, uniformly on
+\(t\le\gamma\log(1/\varepsilon_0)\).
+Consequently, on \(t=\gamma\log s\),
+\[
+ v_s=-2E\varepsilon^3+o(\varepsilon^3),\qquad
+ v_t=\frac{2\ell E}{d}\varepsilon^3+o(\varepsilon^3).
+\]
+The previously obtained first-radius derivatives then give
+\[
+ K(e_\phi,e_\psi)
+ =2\mu E\left(1+\frac{\ell^2}{d^2}\right)s^{-4}
+       +o(s^{-4}).
+\]
+Positive sectional curvature requires \(E\ge0\). Hence \(E=0\),
+which is exactly \(N_2=\ell^2\mu^2/(2d^2)\), and substitution
+of the axis scalar identity gives the two necessary equalities
+\[
+ b=\mu,\qquad
+ g=\omega-\frac{\mu^2}{2\ell}
+                  \left(1+\frac{\ell^2}{d^2}\right).
+\]
+
+These equalities do not merely restrict the next free coefficients.
+Together they force the meridional curvature to have the wrong sign.
+The following fourth-order calculation makes that obstruction
+independent of all remaining axis coefficients.
+Write
+\[
+ \log W(\varepsilon)=\omega\varepsilon+\zeta\varepsilon^2
+                         +O(\varepsilon^3),\qquad
+ F_0'=\ell-\mu\varepsilon+g\varepsilon^2+j\varepsilon^3
+                         +O(\varepsilon^4).
+\]
+Set
+\[
+ A_*=-\frac{\ell\mu}{d},\qquad
+ a_0=\frac{2\ell\mu\log2}{d^2},\qquad
+ \eta=-\frac{\mu^2}{d}.
+\]
+The already solved equations give the following polynomial parts
+at large \(t\), each with an exponentially decaying, polynomially
+weighted remainder (also after the derivatives used below):
+\[
+\begin{split}
+ \alpha_1&=A_*t+a_0+O(e^{-dt}),&
+ h_2&=\eta t+\frac\mu\ell a_0+O(e^{-dt}),\\
+ \alpha_2&=a_{22}t^2+a_{21}t+a_{20}+O(P(t)e^{-dt}),&
+ Q_2&=q_{22}t^2+q_{21}t+q_{20}+O(P(t)e^{-dt}),\\
+ h_3&=\eta_3t+h_{30}+O(e^{-dt}),
+\end{split}
+\]
+where
+\[
+\begin{split}
+ a_{22}&=-\frac{\ell^2\mu}{2d^2},&
+ a_{21}&=\frac{\mu+\ell\omega+\ell a_0+\ell^2\mu/d^2}{d},\\
+ q_{22}&=-\frac{A_*^2}{2},&
+ q_{21}&=\frac{\ell^2\mu^2(1+2\log2)}{d^3},\\
+ \eta_3&=-\frac{2((1-\mu)\omega-g)}d.
+\end{split}
+\]
+Here \(h_2=(\mu/\ell)\alpha_1\) holds exactly, since both
+satisfy the same stable scalar equation with proportional constant
+sources and regular zero data. The formula for \(q_{21}\) also
+has an exact derivation, rather than a numerical fit. In the
+variation-of-parameters expression for \(Y\),
+\[
+ \int_0^x\coth r\tanh^2(r/2)\,dr
+ =-\tfrac12\tanh^2(x/2)+2\log\cosh(x/2)
+ =x-\tfrac12-2\log2+O(e^{-x}).
+\]
+Integrating the other term by parts and using
+\(N_2/d^2=P_0/2\) gives
+\[
+ Y=\tfrac12P_0x^2-P_0(1+2\log2)x+O(1).
+\]
+The relation \(Q_2'/d=-Y'\) proves the displayed \(q_{21}\).
+
+To obtain the equation for \(h_4\), use the exact first diagonal
+equation in the form
+\[
+ h_{tt}+Dh_t=-h_tQ_t-e^{-2h}\mathcal S,
+\]
+\[
+\mathcal S=(\log w)''+F_0''+(Q-h)_{ss}
+ +((\log w)'+\alpha_s)^2+\beta_s^2
+ -h_s((\log w)'+F_0'+(Q-h)_s).
+\]
+Its coefficients are
+\[
+\begin{split}
+ \mathcal S_2&=\mu^2,\\
+ \mathcal S_3&=2((1-\mu)\omega-g)-2\mu\alpha_1+2\ell h_2
+              =2((1-\mu)\omega-g),\\
+ \mathcal S_4&=(6-4\mu)\zeta-3j+6Q_2-6h_2
+      +(\omega+\alpha_1)^2-4\mu\alpha_2+3\ell h_3.
+\end{split}
+\]
+This also verifies the constant-source equation used for \(h_3\).
+Thus
+\[
+ h_4''+Dh_4'=-h_2'Q_2'-\mathcal S_4+2\mu^2h_2.
+\]
+The quadratic coefficient on its right side vanishes:
+\(6q_{22}+A_*^2-4\mu a_{22}=0\).
+The linear coefficient is
+\[
+\begin{split}
+ C_t={}&\eta A_*^2-6q_{21}+6\eta
+       -2(\omega+a_0)A_*+4\mu a_{21}-3\ell\eta_3+2\mu^2\eta\\
+ ={}&\frac{\mu^2}{d^3}
+          \big((d^2+\ell^2)-\mu^2(2d^2+\ell^2)\big).
+\end{split}
+\]
+The last identity substitutes the forced value of \(g\).
+The coefficients \(\zeta,j\) affect only the constant term.
+The full source is \(C_tt+C_0+O(P(t)e^{-dt})\), so the
+stable scalar equation yields \(h_4''\to C_t/d\).
+
+The use of this coefficient at \(t=\gamma\log s\) again requires
+a uniform remainder, now through four orders. The coefficient
+equations are triangular at every fixed order: each physical
+\(s\)-derivative raises the power of \(\varepsilon\), the two
+\(h,\alpha\) homogeneous operators are
+\(\partial_t^2+D\partial_t\), and the
+\((\beta_t,Q_t)\) homogeneous propagator is bounded. Their
+fourth-order sources contain only the first three coefficients,
+their derivatives, and bounded cigar coefficients. They are
+polynomially bounded. This proves polynomial bounds for \(u_4\)
+and all time derivatives needed here. Use
+\[
+ u_{\rm app}=\sum_{r=1}^4\varepsilon^r u_r,\qquad
+ Z_{\rm app}=-\sum_{r=1}^4r\varepsilon^{r+1}u_r
+\]
+in the same first-order system and analytic majorant.
+Its residual is \(O(\varepsilon_0^5P(T))\), with exact cancellation
+in \(Z_t=\partial_s p\). Hence the remainders in \(u,u_t\)
+are \(O(\varepsilon_0^5P(T))\) on a fixed smaller \(z\)-disc.
+Cauchy estimates control the required spatial derivatives there.
+Substitution into the exact diagonal equations then gives the
+same \(O(\varepsilon_0^5P(T))\) error for \(u_{tt}\);
+this does not require differentiating an unquantified time error.
+
+Choose any fixed \(\gamma>5/d\). The exponential tails of
+\(h_2'',h_3''\) at \(t=\gamma\log s\) are then smaller
+than order \(s^{-4}\). Since the meridional metric is
+\(dt^2+H^2ds^2\), its sectional curvature is exactly
+\[
+\begin{split}
+ K(e_s,e_t)&=-H_{tt}/H=-h_{tt}-h_t^2\\
+ &=-\left(\frac{C_t}{d}+\eta^2\right)s^{-4}+o(s^{-4})\\
+ &=-\frac{\mu^2(1-\mu^2)(d^2+\ell^2)}{d^4}s^{-4}+o(s^{-4}).
+\end{split}
+\]
+For \(0<\mu<1\) the coefficient is strictly negative. The
+regular normal development agrees with any complete ambient
+soliton by analytic uniqueness, so this contradicts positive
+sectional curvature and proves the asserted exclusion.
+\(\square\)
+
+**Consequence for the entire diagnostic family in Example 6.5.**
+None of those axis data, for any of their admissible parameters,
+comes from a complete positively curved steady soliton.
+Indeed their analytic expansion has
+\(\mu=1-2a\), \(b=B\), \(\omega=g=0\), and
+\(\ell=B\pi/2\), with \(c>0\). If \(B\ne\mu\), one of the
+two order-\(s^{-3}\) sectional curvatures above is negative.
+If \(B=\mu\), then \(N_2=-\mu^2/2\), so
+\[
+ E=\frac{\mu^2}{2d^2}\left(1+\frac{\ell^2}{d^2}\right)>0,
+ \qquad K(e_s,e_\psi)=-6Es^{-4}+o(s^{-4})<0.
+\]
+This last case uses only the controlled second-order development;
+the third-order calculation is needed for the general exact
+coefficient theorem, not for excluding this family.
+
+The original examples still show that axis positivity and scalar
+identities alone are insufficient. The stronger ambient curvature
+test now excludes every analytic sublinear power-law axis with
+\(c>0\), including all these examples. Actual LP axes have not
+been shown to have the expansion assumed here; a general
+sublinear axis or the branch \(c=0\) is not excluded by this
+argument. The strict boundary-orbit gap remains open.
 
 ### Proposition 6.8 (global transverse Jacobi budget)
 

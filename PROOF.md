@@ -1332,6 +1332,87 @@ been shown to have the expansion assumed here; a general
 sublinear axis or the branch \(c=0\) is not excluded by this
 argument. The strict boundary-orbit gap remains open.
 
+### Corollary 6.7a (finite holomorphic asymptotics suffice)
+
+The exclusion in Proposition 6.7 does not require a convergent power series
+at infinity. It still holds under the following finite, uniform hypothesis.
+For some fixed `0<rho<1` and `0<eta<=1`, the positive real axis functions
+`log w` and `f=F_0'` extend holomorphically to every disc
+`|z-s|<rho*s`, for all sufficiently large real `s`, and there have expansions
+
+\[
+ \log w(z)=\log w_0+\mu\log z+
+                  \sum_{r=1}^4 w_rz^{-r}+O(s^{-4-\eta}),
+ \qquad
+ f(z)=\ell-bz^{-1}+\sum_{r=2}^4 f_rz^{-r}
+                  +O(s^{-4-\eta}).
+\]
+
+The constants in both errors are independent of `s` and `z` in those
+discs; the coefficients are fixed real numbers. Retain `w_0>0`,
+`0<mu<1`, `ell>0`, and positive limiting normal sectional curvature.
+Then no complete positive-sectional-curvature extension exists.
+
+**Proof.** On each smaller concentric disc, Cauchy's inequalities give
+`O(s^{-4-eta-k})` for the `k`-th spatial derivative of either remainder.
+Thus the fourth-order formal coefficients in Proposition 6.7 are unchanged,
+with `omega=w_1`, `zeta=w_2`, `g=f_2`, and `j=f_3`. All normal-axis data
+are obtained from these functions and their spatial derivatives by the
+axis equations; their normalized errors are `O(s^{-4-eta})` in the same
+holomorphic norm. No derivatives of an error on the real line alone are
+being inferred here.
+
+For a large fixed `s_0`, write `epsilon_0=1/s_0` and use
+`xi=s_0/z` as the spatial variable. A fixed disc about `xi=1` lies in
+the assumed holomorphic domain, independently of `s_0`; the physical
+derivative is `-epsilon_0 xi^2 partial_xi`. The parameter-dependent
+regular-singular construction in the proof of Proposition 6.7 therefore
+has the same uniform initial interval. Its coefficientwise analytic
+majorant also applies to differences of the initial axis data: subtract
+the two recurrences, use the same inverse bounds, and majorize each
+analytic difference by its first derivative times the data difference
+on a slightly smaller fixed polydisc. This gives an
+`O(epsilon_0^{4+eta})` error in the normalized initial development.
+
+The fourth-order approximate solution has equation residual
+`O(epsilon_0^5 P(T))`. In the logarithmic-time difference estimate from
+Proposition 6.7, retain also the preceding initial error. Its bounded
+linear propagator and analytic radius estimate give
+
+\[
+ \|u-u_{\rm app}\|+\|u_t-(u_{\rm app})_t\|
+ \le C\bigl(\epsilon_0^{4+\eta}
+                +\epsilon_0^5\bigr)P_1(T),
+ \qquad 0\le t\le T=\gamma\log s_0.
+\]
+
+The same fixed-disc Cauchy estimates give an extra factor `epsilon_0`
+per spatial derivative, and the exact diagonal equations bound the
+second normal derivative. The right-hand side is `o(s_0^{-4})` for every
+fixed `gamma`, since `eta>0`. The estimates at orders two and three
+likewise have the errors needed for the earlier two sign comparisons.
+They force `b=mu` and
+`g=omega-mu^2(1+ell^2/d^2)/(2ell)`, exactly as before.
+The fourth-order meridional curvature is consequently
+
+\[
+ K(e_s,e_t)=-\frac{\mu^2(1-\mu^2)(d^2+\ell^2)}{d^4}s^{-4}
+                         +o(s^{-4})<0.
+\]
+
+Analytic uniqueness identifies this regular development with that of an
+actual complete soliton, giving the same contradiction. \(\square\)
+
+This is a finite-asymptotic version of the same obstruction, not a proof
+of the needed expansions for the LP examples. For instance, exponentially
+small holomorphic perturbations satisfy its remainder condition even
+when they have an essential singularity in `1/s` at zero. Real-axis
+asymptotics without the uniform complex-disc bounds are insufficient for
+this argument; the general sublinear and zero-limit branches remain open.
+The exact algebra, including the connection square in `-H_tt/H`, is
+reconstructed by `scripts/check_sublinear_fourth_order.py`. That script
+does not replace the holomorphic estimates.
+
 ### Proposition 6.8 (global transverse Jacobi budget)
 
 Let the complete positively curved steady soliton carry the standard

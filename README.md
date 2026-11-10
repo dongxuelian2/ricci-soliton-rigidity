@@ -35,7 +35,9 @@ Research on complete steady gradient Ricci solitons with the standard
   axis coefficients. A fourth-order development with a uniform error
   on \(t=\gamma\log s\) justifies the sign for the actual soliton.
   This replaces the former interval restriction by exclusion of the
-  entire analytic power-law sublinear regime. The LP expansion
+  entire analytic power-law sublinear regime. Corollary 6.7a also permits
+  finite fourth-order holomorphic asymptotics with a uniformly controlled
+  remainder, without a convergent series at infinity. The LP expansion
   hypothesis remains unproved.
 * **Global transverse curvature budget:** every normal geodesic from
   one fixed axis meets the other axis in finite time, with nonorthogonal
@@ -125,5 +127,10 @@ analytic expansion at infinity.
 The fixed-radius product limit alone supplies neither that expansion
 nor such uniform control. The branch with zero limiting normal
 curvature also remains separate.
+
+The exact fourth-order source, adjoint integral and full curvature
+coefficient can be reconstructed with
+`python scripts/check_sublinear_fourth_order.py` using SymPy. This checks
+the algebra; it does not verify the analytic hypotheses for actual LP axes.
 
 These notes make no priority claim and are not a submission manuscript.

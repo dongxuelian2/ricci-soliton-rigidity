@@ -836,6 +836,95 @@ In particular it does not exclude \(w(s)/s\to0\).
 When \(c=0\), it says nothing about limits after rescaling by a
 curvature scale that tends to infinity.
 
+### Proposition 6.6a (scalar decay away from the singular axes)
+
+Under the hypotheses of Proposition 6.4, let Q be the closed orbit
+quadrant with metric h, and let d(x) be its distance to the union of
+its two boundary axes. For every epsilon>0 there is D<infinity such
+that d(x)>=D implies R(x)<epsilon.
+
+In particular, if scalar curvature tends to zero along both singular
+axes, then R tends uniformly to zero at infinity on M. This is a
+statement about the actual soliton equations and does not require an
+axis expansion or curvature-scale noncollapse.
+
+**Proof.** Reflect Q across its two totally geodesic boundary axes.
+The resulting section S is the complete totally geodesic fixed surface
+of the two coordinate reflections, diffeomorphic to R². Its Gaussian
+curvature K is strictly positive and bounded. The restriction of F is
+proper and strictly convex: its Hessian on S is the restriction of the
+positive ambient Ricci tensor, and its radial derivative has a uniform
+positive lower bound outside a fixed disk. Each regular potential
+sublevel is therefore a disk with positive boundary geodesic curvature.
+Gauss--Bonnet and exhaustion give
+
+    integral_S K dA <= 2pi,
+    integral_Q K dA <= pi/2.                         (Q-budget)
+
+The second inequality follows from the four reflection symmetries.
+
+Suppose d(x_i)->infinity and R(x_i)>=epsilon>0. Sectional curvature
+and all its derivatives on S are bounded by the ambient estimates.
+The Gromoll--Meyer injectivity estimate, as in Proposition 6.6, applies
+also to S. Consequently (S,h,x_i) has a smoothly convergent pointed
+subsequence with a complete two-dimensional limit (S_infty,h_infty).
+Every fixed-radius ball used in this convergence eventually lies in
+the interior of Q.
+
+The positive orbit-radius functions a,b satisfy Hess_h a<=0 and
+Hess_h b<=0 there. On a ball of radius r about x_i, concavity along
+unit geodesics in both directions, continued almost to distance
+d(x_i)-r, gives
+
+    |grad log a|, |grad log b| <= 1/(d(x_i)-r).
+
+Indeed a positive concave function on a segment of length 2L has
+absolute derivative at its midpoint at most its value divided by L.
+Normalize a,b by their values at x_i. Integration proves convergence
+to 1 uniformly on compact balls. The identities
+`Hess_h a/a=-Rm(.,e_phi,.,e_phi)` and its b analogue, together with
+the ambient curvature derivative bounds, bound all horizontal
+derivatives of these normalized functions. Here the unit orbital
+vectors are parallel along horizontal directions. Thus a subsequence
+converges smoothly, necessarily to the constant 1. In particular their
+normalized Hessians tend to zero.
+
+Normalize F by F(x_i)=0. Its gradient and all higher derivatives are
+bounded, so it too converges smoothly on compact sets. Equation (5)
+passes to
+
+    Ric_(h_infty)=Hess_(h_infty) F_infty.
+
+The scalar-curvature formula for the doubly warped metric, or the
+sectional identities (8), gives at the basepoint
+
+    R(x_i)->2 K_(h_infty)(x_infty)>=epsilon.
+
+Thus the limit is a complete nonflat two-dimensional steady gradient
+soliton with nonnegative curvature, hence a scaled Hamilton cigar.
+There is no smooth nontrivial quotient: its unique curvature maximum
+would be a fixed point of every deck transformation. Its total Gaussian
+curvature is 2pi. On the other hand, every relatively compact domain
+in the limit embeds into Q for large i, so smooth convergence and
+(Q-budget) give total Gaussian curvature at most pi/2. This contradiction
+proves the first assertion.
+
+For the second, suppose an escaping sequence has R>=epsilon. By the
+first assertion it has uniformly bounded quotient distance to one
+axis, after taking a subsequence. Choose points y_i on that axis at
+bounded distance. They escape as well, and R(y_i)->0 by hypothesis.
+Ambient pointed compactness gives a complete steady limit based at
+y_i with nonnegative curvature operator and zero scalar curvature at
+the basepoint. The scalar strong maximum principle makes this limit
+flat. The points x_i remain at bounded distance and therefore cannot
+have scalar curvature at least epsilon. This proves uniform decay.
+\(\square\)
+
+The simultaneous zero-limit branch is consequently a uniform scalar
+decay problem. The proposition does not show that a zero limit on one
+axis forces the same limit on the other, or deduce curvature-scale
+noncollapse or Bryant symmetry from uniform scalar decay.
+
 ### An obstruction to obtaining relative derivative bounds from axis tests
 
 The axis identities in Proposition 6.4, even together with bounded

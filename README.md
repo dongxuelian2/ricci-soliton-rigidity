@@ -47,6 +47,14 @@ Research on complete steady gradient Ricci solitons with the standard
   a globally injective normal gauge. A separate, still unproved
   transverse lower bound would restrict power-law exponents to
   \(\mu\le1/2\); the axis curvature value alone does not supply it.
+* **Scalar decay away from both axes:** the actual soliton equations
+  force scalar curvature to tend uniformly to zero as quotient distance
+  from both singular axes tends to infinity. Positive concavity makes
+  the normalized orbit radii constant in any deep pointed limit; a
+  nonflat two-dimensional steady limit would violate the quadrant's
+  Gaussian-curvature budget. If both axes have zero scalar limits,
+  scalar curvature tends uniformly to zero on the whole manifold.
+  Proposition 6.6a requires no axis expansion.
 * **Exact symmetry in all factor dimensions:** distinct pure sectional
   curvatures at the tip determine the full isometry group through the
   curvature operator, even when the Ricci eigenvalues coincide. Thus

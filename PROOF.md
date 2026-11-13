@@ -836,6 +836,85 @@ In particular it does not exclude \(w(s)/s\to0\).
 When \(c=0\), it says nothing about limits after rescaling by a
 curvature scale that tends to infinity.
 
+### An obstruction to obtaining relative derivative bounds from axis tests
+
+The axis identities in Proposition 6.4, even together with bounded
+derivatives of every fixed order of the axis curvature functions, do
+not imply the scale-dependent bounds
+`|a^(j)|=O(a^(j+1))`, where `a=w'/w`. This matters for replacing the
+expansion hypothesis in Proposition 6.7 by a general slowly varying
+normal development.
+
+Here is an explicit end counterexample. Fix `0<mu<1`, `ell,c>0`,
+`epsilon!=0`, and `b>mu(1-mu)`. On a sufficiently late half-line put
+
+    delta=epsilon*s^(-5/2)*cos(s),
+    w=s^mu*(1+delta),  f=ell-b/s,  C=ell²+2c,
+    k=-w''/w,  U=(f'-k)/2,  V=(f*w'/w-k)/2,
+    N=(C-f²-2f'-2f*w'/w+2k)/2.
+
+Then `w>0`, `w'>0`, `w''<0`, `w->infinity`, and `w'->0`. The three
+axis identities hold exactly by substitution. Since every fixed
+derivative of delta is `O(s^(-5/2))`, direct differentiation gives
+
+    k=mu(1-mu)/s²+O(s^(-5/2)),
+    U=(b-mu(1-mu))/(2s²)+O(s^(-5/2)),
+    V=ell*mu/(2s)+O(s^(-2)),
+    N=c+ell*(b-mu)/s+O(s^(-2)).
+
+All four functions are strictly positive eventually, and every fixed
+derivative is bounded. For example,
+`w''/w=mu(mu-1)/s²+(delta''+2mu*delta'/s)/(1+delta)` proves the
+first estimate with a strictly smaller error than its leading term.
+The other estimates follow from the displayed exact definitions.
+
+Nevertheless
+
+    a''/a³ = 2/mu²+(epsilon/mu³)*s^(1/2)*sin(s)+O(s^(-1/2)).
+
+Indeed `a=mu/s+delta'/(1+delta)` and
+`a''=2mu/s³+epsilon*s^(-5/2)*sin(s)+O(s^(-7/2))`.
+The ratio is unbounded with both signs along the two sequences where
+sin(s)=1 and sin(s)=-1. Thus already `|a''|=O(a³)` fails.
+These are end data satisfying the necessary axis tests, not an actual
+ambient soliton. Bounded derivatives here concern only those axis
+functions; no ambient Shi estimate is asserted for a constructed metric.
+The example ends the proposed deduction from the established axis tests
+and absolute derivative bounds. It does not prevent the full soliton
+equations from imposing additional relative control.
+
+### A conditional Riccati criterion for the strict slope gap
+
+The ODE step of one possible general-profile argument has a precise
+sufficient condition. Let w be a positive increasing concave C³ function
+on a half-line, with `w->infinity`. Put
+
+    a=w'/w,  u=log(w),  b=-a'/a².
+
+Concavity gives `b>=1`. If, for a nonnegative integrable function e(u),
+
+    db/du >= b²-1-e(u),
+
+then `lim w'>0`. To prove this, set `z=b-1>=0` and
+`E(u)=integral_u^infinity e(t)dt`. If z>E somewhere, then
+`v=z-E` satisfies `v'>=2z+z²>=v²` while v>0, forcing finite-u blowup.
+This contradicts smooth positivity of a at every finite u. Hence
+`z<=E->0`. Integrating `z'-2z>=-e` to infinity now gives
+
+    z(u)<=integral_u^infinity exp(-2(t-u))*e(t)dt,
+    integral_(u0)^infinity z <= (1/2)*integral_(u0)^infinity e < infinity.
+
+Finally `(log w')_u=1-b=-z`, so w' has a positive limit.
+The change of variables also gives the exact identity
+
+    a⁴+(a')²-a*a'' = a⁴*(1-b²+db/du).
+
+Consequently a lower bound for this expression with an integrable
+relative error would suffice for the strict gap. Such a bound has not
+been derived from the actual LP normal curvature. The preceding
+counterexample explains why absolute axis derivative estimates alone
+cannot supply the relative expansion needed for that step.
+
 ### Proposition 6.7 (exclusion of analytic sublinear power-law axes)
 
 An actual complete axis under the hypotheses of Proposition 6.4

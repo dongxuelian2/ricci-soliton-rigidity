@@ -128,6 +128,12 @@ The fixed-radius product limit alone supplies neither that expansion
 nor such uniform control. The branch with zero limiting normal
 curvature also remains separate.
 
+The proof now gives a conditional Riccati criterion for the strict
+slope gap, together with oscillatory end data showing that the required
+relative derivative bounds do not follow from the existing axis tests
+and bounded axis derivatives. Deriving the criterion's hypothesis from
+the actual soliton equations remains open.
+
 The exact fourth-order source, adjoint integral and full curvature
 coefficient can be reconstructed with
 `python scripts/check_sublinear_fourth_order.py` using SymPy. This checks

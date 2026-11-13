@@ -925,6 +925,36 @@ decay problem. The proposition does not show that a zero limit on one
 axis forces the same limit on the other, or deduce curvature-scale
 noncollapse or Bryant symmetry from uniform scalar decay.
 
+### Corollary 6.6b (a bounded axis excludes simultaneous flat limits)
+
+Under the same hypotheses, if both axis scalar-curvature limits are
+zero, both axis radius functions are unbounded.
+
+**Proof.** Let `A(t)=max_{F=t} R`. Proposition 6.6a gives `A(t)->0`.
+Every regular potential level is a smooth standard doubly warped S³,
+with metric `d rho²+a(rho)² d phi²+b(rho)² d psi²` on `[0,L_t]`.
+Its second fundamental form is the positive form
+`Ric|_(T{F=t})/|grad F|`. The Gauss equation and
+`|grad F|²=C-R` bound its sectional curvatures above by
+
+    K_t=A(t)+A(t)²/[4(C-A(t))] -> 0.
+
+Indeed the determinant of the second fundamental form on any plane
+is at most one quarter the square of its trace, and that trace is at
+most `R/|grad F|`. Its intrinsic sectional curvatures are positive.
+
+The endpoint conditions for a are `a(0)>0`, `a'(0)=0`, `a(L_t)=0`,
+`a'(L_t)=-1`. Intrinsic nonnegative radial curvature implies `a'<=0`.
+Since `-a''/a<=K_t`, the energy `E=a'²+K_t a²` satisfies
+
+    E'=2a'a(K_t-(-a''/a))<=0.
+
+Hence `1=E(L_t)<=E(0)=K_t a(0)²`. The same argument from the
+opposite endpoint gives `K_t b(L_t)²>=1`. These two endpoint radii
+are precisely the fixed-axis radii on the level F=t, so both tend to
+infinity. This rules out a bounded axis in the simultaneous zero-limit
+branch. It does not give a positive linear slope. \(\square\)
+
 ### An obstruction to obtaining relative derivative bounds from axis tests
 
 The axis identities in Proposition 6.4, even together with bounded

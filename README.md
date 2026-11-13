@@ -54,7 +54,9 @@ Research on complete steady gradient Ricci solitons with the standard
   nonflat two-dimensional steady limit would violate the quadrant's
   Gaussian-curvature budget. If both axes have zero scalar limits,
   scalar curvature tends uniformly to zero on the whole manifold.
-  Proposition 6.6a requires no axis expansion.
+  In that case both fixed-axis radii tend to infinity: a curvature bound
+  on the potential levels forces their endpoint circles to grow.
+  Proposition 6.6a and Corollary 6.6b require no axis expansion.
 * **Exact symmetry in all factor dimensions:** distinct pure sectional
   curvatures at the tip determine the full isometry group through the
   curvature operator, even when the Ricci eigenvalues coincide. Thus

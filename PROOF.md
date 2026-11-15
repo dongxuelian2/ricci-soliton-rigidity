@@ -955,6 +955,78 @@ are precisely the fixed-axis radii on the level F=t, so both tend to
 infinity. This rules out a bounded axis in the simultaneous zero-limit
 branch. It does not give a positive linear slope. \(\square\)
 
+### Proposition 6.6c (the two-axis curvature budget)
+
+Under the hypotheses of Proposition 6.4, suppose both fixed-axis
+radius functions are unbounded. Write
+\(\ell_i=\lim F_i'>0\) and \(c_i=(C-\ell_i^2)/2\ge0\), for
+\(i=1,2\), and let Q carry its quotient metric h. Then
+\[
+ \int_QK_h\,dA+
+ \sum_{i=1}^2\arctan\frac{\sqrt{2c_i}}{\ell_i}
+ \le\frac{\pi}{2}.
+\]
+In particular, strict positive curvature implies
+\[
+ \ell_1^2+\ell_2^2>C,\qquad c_1+c_2<C/2.
+\]
+
+**Proof.** The potential-level quarter-disks
+\(Q_T=Q\cap\{F\le T\}\) exhaust Q. Their level arcs \(\Gamma_T\)
+have positive inward geodesic curvature \(k_T\), and Gauss--Bonnet
+gives
+\[
+ \int_{Q_T}K_h\,dA+\int_{\Gamma_T}k_T\,d\ell=\pi/2.
+\]
+At the intersection of \(\Gamma_T\) with axis i, Proposition 6.6
+gives smooth pointed subsequential convergence, including the
+normalized potential, to its specified product limit. To identify the
+polar section, take limits also of its two coordinate reflections,
+which fix these basepoints: their first jets reflect respectively the
+flat angular direction y and one direction in the normal plane.
+An isometry of a connected complete manifold is determined by its
+value and first derivative at a point, so these limits are the
+y-reflection and the cigar's radial reflection (the normal Euclidean
+reflection if \(c_i=0\)). Their common fixed surface is
+\(\mathbb R_x\) times a complete radial geodesic, with induced metric
+\(dx^2+dt^2\); the Q side selects \(t\ge0\). Thus in the polar
+section the limit is the Euclidean half-plane with coordinates (x,t),
+\(t\ge0\), and potential \(\ell_i x+G_i(t)\), where
+\[
+ G_i(t)=2\log\cosh(\sqrt{c_i/2}\,t),\qquad
+ G_i'(t)=\sqrt{2c_i}\tanh(\sqrt{c_i/2}\,t).
+\]
+When \(c_i=0\), set \(G_i=0\). Fix \(t_0<\infty\) first.
+The implicit function theorem and \(\ell_i>0\) identify a subarc
+of \(\Gamma_T\) starting at this endpoint and converging to
+\(x=-G_i(t)/\ell_i\), \(0\le t\le t_0\). This uses convergence
+only on a fixed compact neighborhood; no increasing-width estimate
+is needed. The subarc curvature integral therefore tends to
+\[
+ \int_0^{t_0}
+ \frac{\ell_iG_i''(t)}{\ell_i^2+G_i'(t)^2}\,dt
+ =\arctan\frac{G_i'(t_0)}{\ell_i}.
+\]
+The value is independent of the convergent subsequence, so it is
+the full limit as \(T\to\infty\). The two subarcs are disjoint
+for sufficiently large T: their diameters stay bounded for fixed
+\(t_0\), whereas their endpoints separate to infinite distance.
+Indeed the first orbit radius is 1-Lipschitz, equals the unbounded
+first-axis radius at one endpoint, and vanishes at the other.
+
+All remaining arc curvature is positive. Taking \(T\to\infty\)
+in Gauss--Bonnet and then \(t_0\to\infty\) proves the budget.
+Since \(K_h>0\), its integral is strictly positive. Consequently
+the displayed angle sum is strictly less than \(\pi/2\).
+Both angles lie in \([0,\pi/2)\), so this is equivalent to
+\((C-\ell_1^2)(C-\ell_2^2)<\ell_1^2\ell_2^2\), giving the stated
+inequalities. \(\square\)
+
+This extends the single-end turning-angle argument of Proposition 7.10
+to both axes of an actual complete soliton, using Proposition 6.6
+instead of the constructed germ's end expansion. It constrains the
+two scalar limits but does not imply positive axis-radius slopes.
+
 ### An obstruction to obtaining relative derivative bounds from axis tests
 
 The axis identities in Proposition 6.4, even together with bounded

@@ -57,6 +57,9 @@ Research on complete steady gradient Ricci solitons with the standard
   In that case both fixed-axis radii tend to infinity: a curvature bound
   on the potential levels forces their endpoint circles to grow.
   Proposition 6.6a and Corollary 6.6b require no axis expansion.
+  If both axis radii are unbounded, their cigar-end turning angles
+  share the quadrant curvature budget; in particular their limiting
+  normal curvatures satisfy \(c_1+c_2<C/2\) (Proposition 6.6c).
 * **Exact symmetry in all factor dimensions:** distinct pure sectional
   curvatures at the tip determine the full isometry group through the
   curvature operator, even when the Ricci eigenvalues coincide. Thus

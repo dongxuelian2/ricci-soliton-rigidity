@@ -955,6 +955,202 @@ are precisely the fixed-axis radii on the level F=t, so both tend to
 infinity. This rules out a bounded axis in the simultaneous zero-limit
 branch. It does not give a positive linear slope. \(\square\)
 
+### Proposition 6.6c (the two-axis curvature budget)
+
+Under the hypotheses of Proposition 6.4, suppose both fixed-axis
+radius functions are unbounded. Write
+\(\ell_i=\lim F_i'>0\) and \(c_i=(C-\ell_i^2)/2\ge0\), for
+\(i=1,2\), and let Q carry its quotient metric h. Then
+\[
+ \int_QK_h\,dA+
+ \sum_{i=1}^2\arctan\frac{\sqrt{2c_i}}{\ell_i}
+ \le\frac{\pi}{2}.
+\]
+In particular, strict positive curvature implies
+\[
+ \ell_1^2+\ell_2^2>C,\qquad c_1+c_2<C/2.
+\]
+
+**Proof.** The potential-level quarter-disks
+\(Q_T=Q\cap\{F\le T\}\) exhaust Q. Their level arcs \(\Gamma_T\)
+have positive inward geodesic curvature \(k_T\), and Gauss--Bonnet
+gives
+\[
+ \int_{Q_T}K_h\,dA+\int_{\Gamma_T}k_T\,d\ell=\pi/2.
+\]
+At the intersection of \(\Gamma_T\) with axis i, Proposition 6.6
+gives smooth pointed subsequential convergence, including the
+normalized potential, to its specified product limit. To identify the
+polar section, take limits also of its two coordinate reflections,
+which fix these basepoints: their first jets reflect respectively the
+flat angular direction y and one direction in the normal plane.
+An isometry of a connected complete manifold is determined by its
+value and first derivative at a point, so these limits are the
+y-reflection and the cigar's radial reflection (the normal Euclidean
+reflection if \(c_i=0\)). Their common fixed surface is
+\(\mathbb R_x\) times a complete radial geodesic, with induced metric
+\(dx^2+dt^2\); the Q side selects \(t\ge0\). Thus in the polar
+section the limit is the Euclidean half-plane with coordinates (x,t),
+\(t\ge0\), and potential \(\ell_i x+G_i(t)\), where
+\[
+ G_i(t)=2\log\cosh(\sqrt{c_i/2}\,t),\qquad
+ G_i'(t)=\sqrt{2c_i}\tanh(\sqrt{c_i/2}\,t).
+\]
+When \(c_i=0\), set \(G_i=0\). Fix \(t_0<\infty\) first.
+The implicit function theorem and \(\ell_i>0\) identify a subarc
+of \(\Gamma_T\) starting at this endpoint and converging to
+\(x=-G_i(t)/\ell_i\), \(0\le t\le t_0\). This uses convergence
+only on a fixed compact neighborhood; no increasing-width estimate
+is needed. The subarc curvature integral therefore tends to
+\[
+ \int_0^{t_0}
+ \frac{\ell_iG_i''(t)}{\ell_i^2+G_i'(t)^2}\,dt
+ =\arctan\frac{G_i'(t_0)}{\ell_i}.
+\]
+The value is independent of the convergent subsequence, so it is
+the full limit as \(T\to\infty\). The two subarcs are disjoint
+for sufficiently large T: their diameters stay bounded for fixed
+\(t_0\), whereas their endpoints separate to infinite distance.
+Indeed the first orbit radius is 1-Lipschitz, equals the unbounded
+first-axis radius at one endpoint, and vanishes at the other.
+
+All remaining arc curvature is positive. Taking \(T\to\infty\)
+in Gauss--Bonnet and then \(t_0\to\infty\) proves the budget.
+Since \(K_h>0\), its integral is strictly positive. Consequently
+the displayed angle sum is strictly less than \(\pi/2\).
+Both angles lie in \([0,\pi/2)\), so this is equivalent to
+\((C-\ell_1^2)(C-\ell_2^2)<\ell_1^2\ell_2^2\), giving the stated
+inequalities. \(\square\)
+
+This extends the single-end turning-angle argument of Proposition 7.10
+to both axes of an actual complete soliton, using Proposition 6.6
+instead of the constructed germ's end expansion. It constrains the
+two scalar limits but does not imply positive axis-radius slopes.
+
+### Proposition 6.6d (simultaneous flat limits saturate the section budget)
+
+Under the hypotheses of Proposition 6.4, suppose scalar curvature
+tends to zero along both axes. Then
+\[
+ \int_QK_h\,dA=\pi/2,\qquad \int_S K_h\,dA=2\pi,
+\]
+where S is the reflected polar section. In particular its ideal
+boundary is a single point, and the distance asymptotic cone of Q
+is a ray. No curvature-scale noncollapse hypothesis is used.
+
+**Proof.** Proposition 6.6a gives uniform scalar decay, so
+\(g=|\nabla F|\to\sqrt C>0\) uniformly at infinity. Both axis
+radii are unbounded by Corollary 6.6b. Write \(\Gamma_T\) for the
+level arc \(\{F=T\}\cap Q\), oriented from the axis where b=0
+to the axis where a=0. Let \(\tau\) be its unit tangent,
+\(n=\nabla F/g\) its outward normal, and k its positive inward
+geodesic curvature. Primes below denote arclength derivatives on
+this arc. The base and angular soliton equations give
+\[
+ kg=K_h-\frac{\operatorname{Hess}_h a(\tau,\tau)}a
+          -\frac{\operatorname{Hess}_h b(\tau,\tau)}b,
+ \qquad a_n,b_n>0.
+\]
+Since \(\nabla_\tau\tau=-kn\),
+\(\operatorname{Hess}_h a(\tau,\tau)=a''+ka_n\), and similarly
+for b. Consequently
+\[
+ k\left(g+\frac{a_n}a+\frac{b_n}b\right)
+       =K_h-\frac{a''}a-\frac{b''}b.
+ \tag{section-turning}
+\]
+Positive mixed sectional curvature also gives
+\(\operatorname{Hess}_h a,\operatorname{Hess}_h b<0\), hence
+\(a'',b''<0\).
+
+Fix \(D>0\). At either endpoint of \(\Gamma_T\), Proposition 6.6
+and the section identification in Proposition 6.6c give the flat
+pointed limit \(dx^2+dt^2\), \(F-F(p_T)=\sqrt C x\).
+The radius of the nonvanishing circle divided by its value at \(p_T\)
+converges smoothly to 1, whereas the radius of the surviving normal
+rotations converges to t on \(t>0\). Thus the endpoint subarc
+\(0\le t\le D\) converges to the vertical segment \(x=0\).
+Its curvature integral tends to zero. At the terminal point of the
+first such subarc,
+\[
+ (a'/a,b'/b)\longrightarrow(0,1/D);
+\]
+at the initial point of the second, with the same global orientation,
+\[
+ (a'/a,b'/b)\longrightarrow(-1/D,0).
+\]
+These statements use only a fixed compact pointed neighborhood for
+each fixed D. The two subarcs are eventually disjoint, because their
+endpoints on the axes separate to infinite distance, as in
+Proposition 6.6c. Denote the intervening arc by \(I_{T,D}\).
+
+For any positive a on this intervening arc,
+\[
+ -\int_{I_{T,D}}\frac{a''}a\,d\ell
+ =-\left[\frac{a'}a\right]_{\partial I_{T,D}}
+   -\int_{I_{T,D}}(a'/a)^2\,d\ell,
+\]
+and likewise for b. Integrating (section-turning), using
+\(a_n,b_n>0\) and \(k>0\), therefore gives
+\[
+ (\min_{\Gamma_T}g)\int_{I_{T,D}}k\,d\ell
+ \le \int_{\Gamma_T}K_h\,d\ell+2/D+o(1)
+ \qquad(T\to\infty),
+\]
+with D fixed. No pointwise bound on curvature along the growing
+middle arc has been assumed.
+
+The finite quadrant budget and the coarea formula imply
+\[
+ \int_{T_0}^{\infty}\!\left(\int_{\Gamma_T}K_h\,d\ell\right)dT
+ =\int_{Q\cap\{F\ge T_0\}}K_hg\,dA<\infty,
+\]
+since \(g\le\sqrt C\). Hence some \(T_j\to\infty\) satisfy
+\(\int_{\Gamma_{T_j}}K_h\,d\ell\to0\). Adding back the two
+endpoint arcs and using their vanishing turning yields
+\[
+ \limsup_j\int_{\Gamma_{T_j}}k\,d\ell
+ \le\frac{2}{\sqrt C D}.
+\]
+Gauss--Bonnet identifies the left-hand limit with
+\(\pi/2-\int_QK_h\,dA\). Letting \(D\to\infty\) proves the
+claimed equality; reflection gives the assertion for S.
+For a complete plane with nonnegative curvature, total curvature
+\(2\pi\) means its ideal boundary is one point, by
+[Shioya, Theorem 2.4](https://www.jstage.jst.go.jp/article/tmj1949/43/1/43_1_37/_pdf/-char/ja).
+The distance cone is accordingly a ray. Folding S into its four
+reflection chambers identifies Q with the corresponding metric
+quotient, so its distance cone is a ray as well. \(\square\)
+
+This is a statement about the polar section S, not the fixed surfaces
+in the strict total-curvature question. The Bryant soliton satisfies
+these conclusions; this argument neither proves Bryant symmetry nor
+excludes the simultaneous flat-limit branch for asymmetric LP solitons.
+Hebbar--Šešum's
+[Theorem 1.6](https://arxiv.org/html/2603.21397v2) also concludes a
+ray cone from uniform scalar decay in their setting, but assumes an
+all-scale noncollapsed canonical flow through (A3). Their weak
+\(\kappa\)-solution hypothesis does not follow from the assumptions
+used here.
+
+**Corollary (the ray branch for the LP family).** For the
+four-dimensional LP solitons, the following are equivalent:
+both axis scalar-curvature limits are zero; scalar curvature tends
+uniformly to zero at infinity; the ambient distance asymptotic cone
+is a ray. The first two are equivalent by Proposition 6.6a and
+restriction to the axes. Under these conditions Proposition 6.6d
+makes the quotient cone a ray, so the parameter L in [LP, Theorem 5.1]
+is zero. Its 1-Lipschitz boundary warps satisfy \(a(L)=b(0)=0\);
+thus both vanish on the singleton interval, and the entire ambient
+ideal boundary is one point. Conversely, Hebbar--Šešum's Theorem 1.7
+proves that an ambient ray cone implies uniform scalar decay under
+\(\operatorname{Ric}>0\), \(\sec\ge0\), and a critical point of the
+potential; that direction does not assume (A3) or \(\kappa\)-noncollapse.
+This separates the ray branch from the branch with a positive
+quotient cone angle and at least one nonzero axis scalar limit.
+It does not exclude the ray branch when \(\theta<1\), or establish
+Bryant rigidity within it.
+
 ### An obstruction to obtaining relative derivative bounds from axis tests
 
 The axis identities in Proposition 6.4, even together with bounded

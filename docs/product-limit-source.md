@@ -4,7 +4,7 @@
 
 This note checks one step relevant to the original boundary-orbit question: whether the tip-curvature ratio selected in the Lavoyer–Peachey construction, together with smooth convergence and the stated symmetry, excludes a product of two cigars.
 
-It does **not** prove that the actual LP sequence converges to a product, disprove the existence theorem, or supply a counterexample with strictly positive curvature operator. The strict total-curvature gap remains unresolved.
+The exact product model below satisfies the recorded limiting identities and has zero mixed curvature. Excluding this endpoint for the actual selected LP sequence requires an additional argument. The strict total-curvature gap remains open.
 
 Source: [Lavoyer–Peachey, published version](https://doi.org/10.1007/s12220-026-02567-x), Section 4, Lemma 4.1 and the proof of Theorem 1.1; see also [arXiv:2509.25081v2](https://arxiv.org/html/2509.25081v2#S4).
 
